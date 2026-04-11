@@ -1,0 +1,17 @@
+[
+  {
+    "wrong": "iron",
+    "right": "science",
+    "context": ["class", "Lucas", "hard", "figure", "third"]
+  },
+  {
+    "wrong": "g\\.",
+    "right": "gym",
+    "context": ["class", "fourth", "exercising"]
+  },
+  {
+    "wrong": "g ",
+    "right": "gym ",
+    "context": ["class", "fourth", "exercising"]
+  }
+]

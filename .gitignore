@@ -1,0 +1,47 @@
+# Environment & secrets
+.env
+credentials.json
+token.json
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Session logs & transcripts (generated at runtime)
+logs/session_*.json
+transcripts/session_*.txt
+
+# Generated output files
+subtitle.txt
+subtitle_partial.txt
+output/
+
+# Audio input files
+audio_input/*.wav
+audio_input/*.mp3
+audio_input/*.mp4
+audio_input/*.m4a
+
+# Large binary/archive files
+*.rar
+*.zip
+*.tar.gz
+m5.rar
+
+# Temp files
+.tmp/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

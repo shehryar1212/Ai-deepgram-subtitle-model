@@ -1,0 +1,2782 @@
+{
+  "Shift View": {
+    "en": "Shift View",
+    "el": "Εμφάνιση βάρδιας",
+    "fr": "Vue Période de travail",
+    "it": "Vista turno",
+    "es": "Vista de turno",
+    "pt": "Visão do Turno",
+    "bg": "Преглед на смяна",
+    "sq": "Pamje e ndërrimit"
+  },
+  "Factory Overview": {
+    "en": "Factory Overview",
+    "el": "Προβολή Εργοστασίου",
+    "fr": "Vue Usine",
+    "it": "Vista fabbrica",
+    "es": "Vista de fábrica",
+    "pt": "Visão da fábrica",
+    "bg": "Преглед на фабрика",
+    "sq": "Pamje e impiantit"
+  },
+  "Dashboard": {
+    "en": "Dashboard",
+    "el": "Ταμπλό ελέγχου",
+    "fr": "Tableau de bord",
+    "it": "Dashboard",
+    "es": "Tablero",
+    "pt": "Painel",
+    "bg": "Табло",
+    "sq": "Paneli"
+  },
+  "Reports": {
+    "en": "Reports",
+    "el": "Αναφορές",
+    "fr": "Rapports",
+    "it": "Report",
+    "es": "Informes",
+    "pt": "Relatórios",
+    "bg": "Отчети",
+    "sq": "Raporte"
+  },
+  "Settings": {
+    "en": "Settings",
+    "el": "Ρυθμίσεις",
+    "fr": "Paramètres",
+    "it": "Impostazioni",
+    "es": "Configuración",
+    "pt": "Definições",
+    "bg": "Настройки",
+    "sq": "Cilësimet"
+  },
+  "Help": {
+    "en": "Help",
+    "el": "Βοήθεια",
+    "fr": "Aide",
+    "it": "Aiuto",
+    "es": "Ayuda",
+    "pt": "Ajuda",
+    "bg": "Помощ",
+    "sq": "Ndihmë"
+  },
+  "What's new": {
+    "en": "What's new",
+    "el": "Τι νέο υπάρχει",
+    "fr": "Nouveautés",
+    "it": "Novità",
+    "es": "Qué hay de nuevo",
+    "pt": "Novidades",
+    "bg": "Какво ново",
+    "sq": "Çfarë ka të re"
+  },
+  "Log out": {
+    "en": "Log out",
+    "el": "Αποσύνδεση",
+    "fr": "Déconnexion",
+    "it": "Esci",
+    "es": "Cerrar sesión",
+    "pt": "Sair",
+    "bg": "Изход",
+    "sq": "Çkyçu"
+  },
+  "John": {
+    "en": "John",
+    "el": "John",
+    "fr": "John",
+    "it": "John",
+    "es": "John",
+    "pt": "John",
+    "bg": "John",
+    "sq": "John"
+  },
+  "123h 27m 15s": {
+    "en": "123h 27m 15s",
+    "el": "123ώ 27λ 15δ",
+    "fr": "123h 27m 15s",
+    "it": "123h 27m 15s",
+    "es": "123h 27m 15s",
+    "pt": "123h 27m 15s",
+    "bg": "123ч 27м 15с",
+    "sq": "123or 27min 15sek"
+  },
+  "% of planned time": {
+    "en": "% of planned time",
+    "el": "% του προγραμματισμένου χρόνου",
+    "fr": "% du temps prévu",
+    "it": "% del tempo pianificato",
+    "es": "% del tiempo planificado",
+    "pt": "% do tempo planejado",
+    "bg": "% от планираното време",
+    "sq": "% e kohës së planifikuar"
+  },
+  "X101 Bio": {
+    "en": "X101 Bio",
+    "el": "X101 Bio",
+    "fr": "X101 Bio",
+    "it": "X101 Bio",
+    "es": "X101 Bio",
+    "pt": "X101 Bio",
+    "bg": "X101 Bio",
+    "sq": "X101 Bio"
+  },
+  "This year": {
+    "en": "This year",
+    "el": "Αυτή τη χρονιά",
+    "fr": "Cette année",
+    "it": "Quest'anno",
+    "es": "Este año",
+    "pt": "Este ano",
+    "bg": "Тази година",
+    "sq": "Këtë vit"
+  },
+  "Shift View logs": {
+    "en": "Shift View logs",
+    "el": "Καταγραφές βάρδιας",
+    "fr": "Journaux de poste",
+    "it": "Registri di turno",
+    "es": "Registros de turno",
+    "pt": "Registros de turno",
+    "bg": "Логове на смяната",
+    "sq": "Regjistrat e ndërrimit"
+  },
+  "Quality": {
+    "en": "Quality",
+    "el": "Ποιότητα",
+    "fr": "Qualité",
+    "it": "Qualità",
+    "es": "Calidad",
+    "pt": "Qualidade",
+    "bg": "Качество",
+    "sq": "Cilësia"
+  },
+  "Unknown": {
+    "en": "Unknown",
+    "el": "Άγνωστο",
+    "fr": "Inconnu",
+    "it": "Sconosciuto",
+    "es": "Desconocido",
+    "pt": "Desconhecido",
+    "bg": "Неизвестно",
+    "sq": "E panjohur"
+  },
+  "Shift quantity": {
+    "en": "Shift quantity",
+    "el": "Ποσότητα βάρδιας",
+    "fr": "Quantité de poste",
+    "it": "Quantità di turno",
+    "es": "Cantidad de turno",
+    "pt": "Quantidade de turno",
+    "bg": "Количество на смяната",
+    "sq": "Sasia e ndërrimit"
+  },
+  "12m 31s": {
+    "en": "12m 31s",
+    "el": "12λ 31δ",
+    "fr": "12m 31s",
+    "it": "12m 31s",
+    "es": "12m 31s",
+    "pt": "12m 31s",
+    "bg": "12м 31с",
+    "sq": "12min 31sek"
+  },
+  "Unknown, Butch Coolidge": {
+    "en": "Unknown, Butch Coolidge",
+    "el": "Άγνωστο, Butch Coolidge",
+    "fr": "Inconnu, Butch Coolidge",
+    "it": "Sconosciuto, Butch Coolidge",
+    "es": "Desconocido, Butch Coolidge",
+    "pt": "Desconhecido, Butch Coolidge",
+    "bg": "Неизвестно, Butch Coolidge",
+    "sq": "E panjohur, Butch Coolidge"
+  },
+  "Production data": {
+    "en": "Production data",
+    "el": "Δεδομένα παραγωγής",
+    "fr": "Données de production",
+    "it": "Dati di produzione",
+    "es": "Datos de producción",
+    "pt": "Dados de produção",
+    "bg": "Данни за производство",
+    "sq": "Të dhënat e prodhimit"
+  },
+  "Unplanned Cleaning": {
+    "en": "Unplanned Cleaning",
+    "el": "Απρογραμμάτιστη καθαριότητα",
+    "fr": "Nettoyage non planifié",
+    "it": "Pulizia non pianificata",
+    "es": "Limpieza no planificada",
+    "pt": "Limpeza não planejada",
+    "bg": "Непланирано почистване",
+    "sq": "Pastrim i paplanifikuar"
+  },
+  "Last quarter": {
+    "en": "Last quarter",
+    "el": "Τελευταίο τρίμηνο",
+    "fr": "Dernier trimestre",
+    "it": "Ultimo trimestre",
+    "es": "Último trimestre",
+    "pt": "Último trimestre",
+    "bg": "Последно тримесечие",
+    "sq": "Tremujori i fundit"
+  },
+  "Operators": {
+    "en": "Operators",
+    "el": "Χειριστές",
+    "fr": "Opérateurs",
+    "it": "Operatori",
+    "es": "Operadores",
+    "pt": "Operadores",
+    "bg": "Оператори",
+    "sq": "Operatorët"
+  },
+  "Today": {
+    "en": "Today",
+    "el": "Σήμερα",
+    "fr": "Aujourd'hui",
+    "it": "Oggi",
+    "es": "Hoy",
+    "pt": "Hoje",
+    "bg": "Днес",
+    "sq": "Sot"
+  },
+  "Shift total quantity / Ideal quantity": {
+    "en": "Shift total quantity / Ideal quantity",
+    "el": "Συνολική ποσότητα βάρδιας / Ιδανική ποσότητα",
+    "fr": "Quantité totale de poste / Quantité idéale",
+    "it": "Quantità totale di turno / Quantità ideale",
+    "es": "Cantidad total de turno / Cantidad ideal",
+    "pt": "Quantidade total de turno / Quantidade ideal",
+    "bg": "Обща количество на смяната / Идеално количество",
+    "sq": "Sasia totale e ndërrimit / Sasia ideale"
+  },
+  "CNC machine": {
+    "en": "CNC machine",
+    "el": "Μηχανή CNC",
+    "fr": "Machine CNC",
+    "it": "Macchina CNC",
+    "es": "Máquina CNC",
+    "pt": "Máquina CNC",
+    "bg": "CNC машина",
+    "sq": "Makinë CNC"
+  },
+  "10h 53m 49s": {
+    "en": "10h 53m 49s",
+    "el": "10ώ 53λ 49δ",
+    "fr": "10h 53m 49s",
+    "it": "10h 53m 49s",
+    "es": "10h 53m 49s",
+    "pt": "10h 53m 49s",
+    "bg": "10ч 53м 49с",
+    "sq": "10or 53min 49sek"
+  },
+  "13m 23s": {
+    "en": "13m 23s",
+    "el": "13λ 23δ",
+    "fr": "13m 23s",
+    "it": "13m 23s",
+    "es": "13m 23s",
+    "pt": "13m 23s",
+    "bg": "13м 23с",
+    "sq": "13min 23sek"
+  },
+  "448h 59m 46s": {
+    "en": "448h 59m 46s",
+    "el": "448ώ 59λ 46δ",
+    "fr": "448h 59m 46s",
+    "it": "448h 59m 46s",
+    "es": "448h 59m 46s",
+    "pt": "448h 59m 46s",
+    "bg": "448ч 59м 46с",
+    "sq": "448or 59min 46sek"
+  },
+  "Operating": {
+    "en": "Operating",
+    "el": "Λειτουργία",
+    "fr": "Fonctionnement",
+    "it": "Operativo",
+    "es": "Operativo",
+    "pt": "Operando",
+    "bg": "Работа",
+    "sq": "Funksionimi"
+  },
+  "Profili u përditësua": {
+    "en": "Profili u përditësua",
+    "el": "Προφίλ ενημερώθηκε",
+    "fr": "Profil mis à jour",
+    "it": "Profilo aggiornato",
+    "es": "Perfil actualizado",
+    "pt": "Perfil atualizado",
+    "bg": "Профилът е актуализиран",
+    "sq": "Profili u përditësua"
+  },
+  "Define the work schedule of each station in your factory.": {
+    "en": "Define the work schedule of each station in your factory.",
+    "el": "Ορίστε το πρόγραμμα εργασίας κάθε σταθμού στο εργοστάσιό σας.",
+    "fr": "Définissez le calendrier de travail de chaque station dans votre usine.",
+    "it": "Definisci il programma di lavoro di ogni stazione nella tua fabbrica.",
+    "es": "Define el horario de trabajo de cada estación en tu fábrica.",
+    "pt": "Defina o cronograma de trabalho de cada estação na sua fábrica.",
+    "bg": "Определете работния график на всяка станция във вашата фабрика.",
+    "sq": "Definoni orarin e punës për çdo stacion në fabrikën tuaj."
+  },
+  "F 27.03 - 2st": {
+    "en": "F 27.03 - 2st",
+    "el": "F 27.03 - 2ος",
+    "fr": "F 27.03 - 2ème",
+    "it": "F 27.03 - 2°",
+    "es": "F 27.03 - 2°",
+    "pt": "F 27.03 - 2º",
+    "bg": "F 27.03 - 2-ри",
+    "sq": "F 27.03 - 2"
+  },
+  "Unplanned": {
+    "en": "Unplanned",
+    "el": "Μη προγραμματισμένο",
+    "fr": "Non planifié",
+    "it": "Non pianificato",
+    "es": "No planificado",
+    "pt": "Não planejado",
+    "bg": "Непланирано",
+    "sq": "Pa planifikim"
+  },
+  "Previous week": {
+    "en": "Previous week",
+    "el": "Προηγούμενη εβδομάδα",
+    "fr": "Semaine précédente",
+    "it": "Settimana precedente",
+    "es": "Semana anterior",
+    "pt": "Semana anterior",
+    "bg": "Предишна седмица",
+    "sq": "Java e kaluar"
+  },
+  "1h 48m": {
+    "en": "1h 48m",
+    "el": "1ώ 48λ",
+    "fr": "1h 48m",
+    "it": "1h 48m",
+    "es": "1h 48m",
+    "pt": "1h 48m",
+    "bg": "1ч 48м",
+    "sq": "1or 48min"
+  },
+  "Period": {
+    "en": "Period",
+    "el": "Περίοδος",
+    "fr": "Période",
+    "it": "Periodo",
+    "es": "Período",
+    "pt": "Período",
+    "bg": "Период",
+    "sq": "Periudha"
+  },
+  "Work arrangement": {
+    "en": "Work arrangement",
+    "el": "Διάταξη εργασίας",
+    "fr": "Arrangement de travail",
+    "it": "Disposizione di lavoro",
+    "es": "Organización del trabajo",
+    "pt": "Arranjo de trabalho",
+    "bg": "Работно разположение",
+    "sq": "Rregullimi i punës"
+  },
+  "DEMO": {
+    "en": "DEMO",
+    "el": "DEMO",
+    "fr": "DEMO",
+    "it": "DEMO",
+    "es": "DEMO",
+    "pt": "DEMO",
+    "bg": "DEMO",
+    "sq": "DEMO"
+  },
+  "First day of week": {
+    "en": "First day of week",
+    "el": "Πρώτη μέρα της εβδομάδας",
+    "fr": "Premier jour de la semaine",
+    "it": "Primo giorno della settimana",
+    "es": "Primer día de la semana",
+    "pt": "Primeiro dia da semana",
+    "bg": "Първи ден от седмицата",
+    "sq": "Dita e parë e javës"
+  },
+  "Groups": {
+    "en": "Groups",
+    "el": "Ομάδες",
+    "fr": "Groupes",
+    "it": "Gruppi",
+    "es": "Grupos",
+    "pt": "Grupos",
+    "bg": "Групи",
+    "sq": "Grupet"
+  },
+  "Manage reasons that operators use to comment speed loss.": {
+    "en": "Manage reasons that operators use to comment speed loss.",
+    "el": "Διαχειριστείτε τους λόγους που χρησιμοποιούν οι χειριστές για να σχολιάσουν την απώλεια ταχύτητας.",
+    "fr": "Gérez les raisons que les opérateurs utilisent pour commenter la perte de vitesse.",
+    "it": "Gestisci i motivi che gli operatori usano per commentare la perdita di velocità.",
+    "es": "Gestiona las razones que los operadores utilizan para comentar la pérdida de velocidad.",
+    "pt": "Gerencie os motivos que os operadores usam para comentar a perda de velocidade.",
+    "bg": "Управлявайте причините, които операторите използват, за да коментират загубата на скорост.",
+    "sq": "Menaxhoni arsyet që operatorët përdorin për të komentuar humbjen e shpejtësisë."
+  },
+  "48m": {
+    "en": "48m",
+    "el": "48λ",
+    "fr": "48m",
+    "it": "48m",
+    "es": "48m",
+    "pt": "48m",
+    "bg": "48м",
+    "sq": "48min"
+  },
+  "Users": {
+    "en": "Users",
+    "el": "Χρήστες",
+    "fr": "Utilisateurs",
+    "it": "Utenti",
+    "es": "Usuarios",
+    "pt": "Usuários",
+    "bg": "Потребители",
+    "sq": "Përdoruesit"
+  },
+  "09m 56s": {
+    "en": "09m 56s",
+    "el": "09λ 56δ",
+    "fr": "09m 56s",
+    "it": "09m 56s",
+    "es": "09m 56s",
+    "pt": "09m 56s",
+    "bg": "09м 56с",
+    "sq": "09min 56sek"
+  },
+  "Security": {
+    "en": "Security",
+    "el": "Ασφάλεια",
+    "fr": "Sécurité",
+    "it": "Sicurezza",
+    "es": "Seguridad",
+    "pt": "Segurança",
+    "bg": "Сигурност",
+    "sq": "Siguria"
+  },
+  "Material Quality Issues": {
+    "en": "Material Quality Issues",
+    "el": "Προβλήματα ποιότητας υλικών",
+    "fr": "Problèmes de qualité des matériaux",
+    "it": "Problemi di qualità dei materiali",
+    "es": "Problemas de calidad de materiales",
+    "pt": "Problemas de qualidade do material",
+    "bg": "Проблеми с качеството на материалите",
+    "sq": "Problemet e cilësisë së materialeve"
+  },
+  "Forklift Wait": {
+    "en": "Forklift Wait",
+    "el": "Αναμονή για γερανό",
+    "fr": "Attente de chariot élévateur",
+    "it": "Attesa del carrello elevatore",
+    "es": "Espera de montacargas",
+    "pt": "Espera de empilhadeira",
+    "bg": "Изчакване на мотокар",
+    "sq": "Pritja për karrocën e ngarkesave"
+  },
+  "Set Up": {
+    "en": "Set Up",
+    "el": "Ρύθμιση",
+    "fr": "Configuration",
+    "it": "Impostazione",
+    "es": "Configuración",
+    "pt": "Configuração",
+    "bg": "Настройка",
+    "sq": "Konfigurimi"
+  },
+  "Production speed": {
+    "en": "Production speed",
+    "el": "Ταχύτητα παραγωγής",
+    "fr": "Vitesse de production",
+    "it": "Velocità di produzione",
+    "es": "Velocidad de producción",
+    "pt": "Velocidade de produção",
+    "bg": "Скорост на производство",
+    "sq": "Shpejtësia e prodhimit"
+  },
+  "0 / 0 null": {
+    "en": "0 / 0 null",
+    "el": "0 / 0 κενό",
+    "fr": "0 / 0 nul",
+    "it": "0 / 0 nullo",
+    "es": "0 / 0 nulo",
+    "pt": "0 / 0 nulo",
+    "bg": "0 / 0 нула",
+    "sq": "0 / 0 nul"
+  },
+  "2st": {
+    "en": "2st",
+    "el": "2η",
+    "fr": "2ème",
+    "it": "2°",
+    "es": "2º",
+    "pt": "2º",
+    "bg": "2-ри",
+    "sq": "2-të"
+  },
+  "27h 13m 15s": {
+    "en": "27h 13m 15s",
+    "el": "27ώ 13λ 15δ",
+    "fr": "27h 13m 15s",
+    "it": "27h 13m 15s",
+    "es": "27h 13m 15s",
+    "pt": "27h 13m 15s",
+    "bg": "27ч 13м 15с",
+    "sq": "27or 13min 15sek"
+  },
+  "20h 07m 21s": {
+    "en": "20h 07m 21s",
+    "el": "20ώ 07λ 21δ",
+    "fr": "20h 07m 21s",
+    "it": "20h 07m 21s",
+    "es": "20h 07m 21s",
+    "pt": "20h 07m 21s",
+    "bg": "20ч 07м 21с",
+    "sq": "20or 07min 21sek"
+  },
+  "Setup": {
+    "en": "Setup",
+    "el": "Ρύθμιση",
+    "fr": "Configuration",
+    "it": "Impostazione",
+    "es": "Configuración",
+    "pt": "Configuração",
+    "bg": "Настройка",
+    "sq": "Konfigurimi"
+  },
+  "No data available": {
+    "en": "No data available",
+    "el": "Δεν υπάρχουν διαθέσιμα δεδομένα",
+    "fr": "Aucune donnée disponible",
+    "it": "Nessun dato disponibile",
+    "es": "No hay datos disponibles",
+    "pt": "Nenhum dado disponível",
+    "bg": "Няма налични данни",
+    "sq": "Nuk ka të dhëna të disponueshme"
+  },
+  "1h 32m": {
+    "en": "1h 32m",
+    "el": "1ώ 32λ",
+    "fr": "1h 32m",
+    "it": "1h 32m",
+    "es": "1h 32m",
+    "pt": "1h 32m",
+    "bg": "1ч 32м",
+    "sq": "1or 32min"
+  },
+  "Atlanta 3PPM": {
+    "en": "Atlanta 3PPM",
+    "el": "Ατλάντα 3PPM",
+    "fr": "Atlanta 3PPM",
+    "it": "Atlanta 3PPM",
+    "es": "Atlanta 3PPM",
+    "pt": "Atlanta 3PPM",
+    "bg": "Атланта 3PPM",
+    "sq": "Atlanta 3PPM"
+  },
+  "Batch quantity": {
+    "en": "Batch quantity",
+    "el": "Ποσότητα παρτίδας",
+    "fr": "Quantité de lot",
+    "it": "Quantità di lotto",
+    "es": "Cantidad de lote",
+    "pt": "Quantidade de lote",
+    "bg": "Количество партида",
+    "sq": "Sasia e grupit"
+  },
+  "Test 50010 Test Product 1 ppm": {
+    "en": "Test 50010 Test Product 1 ppm",
+    "el": "Δοκιμή 50010 Δοκιμαστικό προϊόν 1 ppm",
+    "fr": "Test 50010 Produit de test 1 ppm",
+    "it": "Test 50010 Prodotto di prova 1 ppm",
+    "es": "Prueba 50010 Producto de prueba 1 ppm",
+    "pt": "Teste 50010 Produto de teste 1 ppm",
+    "bg": "Тест 50010 Тестов продукт 1 ppm",
+    "sq": "Test 50010 Produkti i testit 1 ppm"
+  },
+  "List": {
+    "en": "List",
+    "el": "Λίστα",
+    "fr": "Liste",
+    "it": "Elenco",
+    "es": "Lista",
+    "pt": "Lista",
+    "bg": "Списък",
+    "sq": "Lista"
+  },
+  "Devices": {
+    "en": "Devices",
+    "el": "Συσκευές",
+    "fr": "Appareils",
+    "it": "Dispositivi",
+    "es": "Dispositivos",
+    "pt": "Dispositivos",
+    "bg": "Устройства",
+    "sq": "Dispozita"
+  },
+  "10m 43s": {
+    "en": "10m 43s",
+    "el": "10λ 43δ",
+    "fr": "10m 43s",
+    "it": "10m 43s",
+    "es": "10m 43s",
+    "pt": "10m 43s",
+    "bg": "10м 43с",
+    "sq": "10min 43sek"
+  },
+  "Duration (All)": {
+    "en": "Duration (All)",
+    "el": "Διάρκεια (Όλα)",
+    "fr": "Durée (Tout)",
+    "it": "Durata (Tutti)",
+    "es": "Duración (Todo)",
+    "pt": "Duração (Tudo)",
+    "bg": "Продължителност (Всички)",
+    "sq": "Kohëzgjatja (Të gjitha)"
+  },
+  "OEE overview": {
+    "en": "OEE overview",
+    "el": "Επισκόπηση OEE",
+    "fr": "Aperçu OEE",
+    "it": "Panoramica OEE",
+    "es": "Resumen OEE",
+    "pt": "Visão geral do OEE",
+    "bg": "Обзор на OEE",
+    "sq": "Përmbledhje OEE"
+  },
+  "Add tab": {
+    "en": "Add tab",
+    "el": "Προσθήκη καρτέλας",
+    "fr": "Ajouter un onglet",
+    "it": "Aggiungi scheda",
+    "es": "Agregar pestaña",
+    "pt": "Adicionar guia",
+    "bg": "Добавяне на раздел",
+    "sq": "Shto skedën"
+  },
+  "25h 28m 30s": {
+    "en": "25h 28m 30s",
+    "el": "25ώ 28λ 30δ",
+    "fr": "25h 28m 30s",
+    "it": "25h 28m 30s",
+    "es": "25h 28m 30s",
+    "pt": "25h 28m 30s",
+    "bg": "25ч 28м 30с",
+    "sq": "25or 28min 30sek"
+  },
+  "09m 53s": {
+    "en": "09m 53s",
+    "el": "09λ 53δ",
+    "fr": "09m 53s",
+    "it": "09m 53s",
+    "es": "09m 53s",
+    "pt": "09m 53s",
+    "bg": "09м 53с",
+    "sq": "09min 53sek"
+  },
+  "10m 32s": {
+    "en": "10m 32s",
+    "el": "10λ 32δ",
+    "fr": "10m 32s",
+    "it": "10m 32s",
+    "es": "10m 32s",
+    "pt": "10m 32s",
+    "bg": "10м 32с",
+    "sq": "10m 32s"
+  },
+  "25h 52m 08s": {
+    "en": "25h 52m 08s",
+    "el": "25ώ 52λ 08δ",
+    "fr": "25h 52m 08s",
+    "it": "25h 52m 08s",
+    "es": "25h 52m 08s",
+    "pt": "25h 52m 08s",
+    "bg": "25ч 52м 08с",
+    "sq": "25h 52m 08s"
+  },
+  "1st, 2st": {
+    "en": "1st, 2st",
+    "el": "1ος, 2ος",
+    "fr": "1er, 2ème",
+    "it": "1°, 2°",
+    "es": "1º, 2º",
+    "pt": "1º, 2º",
+    "bg": "1ви, 2ри",
+    "sq": "1, 2"
+  },
+  "Mechanical Faliure": {
+    "en": "Mechanical Faliure",
+    "el": "Μηχανική Αποτυχία",
+    "fr": "Défaillance Mécanique",
+    "it": "Guasto Meccanico",
+    "es": "Fallo Mecánico",
+    "pt": "Falha Mecânica",
+    "bg": "Механична повреда",
+    "sq": "Dështim Mekanik"
+  },
+  "1 848h 56m 56s": {
+    "en": "1 848h 56m 56s",
+    "el": "1 848ώ 56λ 56δ",
+    "fr": "1 848h 56m 56s",
+    "it": "1 848h 56m 56s",
+    "es": "1 848h 56m 56s",
+    "pt": "1 848h 56m 56s",
+    "bg": "1 848ч 56м 56с",
+    "sq": "1 848h 56m 56s"
+  },
+  "Meeting": {
+    "en": "Meeting",
+    "el": "Συνάντηση",
+    "fr": "Réunion",
+    "it": "Riunione",
+    "es": "Reunión",
+    "pt": "Reunião",
+    "bg": "Среща",
+    "sq": "Takim"
+  },
+  "Break": {
+    "en": "Break",
+    "el": "Διάλειμμα",
+    "fr": "Pause",
+    "it": "Pausa",
+    "es": "Descanso",
+    "pt": "Intervalo",
+    "bg": "Пауза",
+    "sq": "Pauzë"
+  },
+  "Shift Handover": {
+    "en": "Shift Handover",
+    "el": "Παράδοση Βάρδιας",
+    "fr": "Passage de Service",
+    "it": "Passaggio di Turno",
+    "es": "Entrega de Turno",
+    "pt": "Transferência de Turno",
+    "bg": "Предаване на смяна",
+    "sq": "Dorëzimi i Ndërrimit"
+  },
+  "Scrap": {
+    "en": "Scrap",
+    "el": "Σκάρτα",
+    "fr": "Rebut",
+    "it": "Scarto",
+    "es": "Desecho",
+    "pt": "Refugo",
+    "bg": "Брак",
+    "sq": "Skrap"
+  },
+  "Last 12 months": {
+    "en": "Last 12 months",
+    "el": "Τελευταίοι 12 μήνες",
+    "fr": "Derniers 12 mois",
+    "it": "Ultimi 12 mesi",
+    "es": "Últimos 12 meses",
+    "pt": "Últimos 12 meses",
+    "bg": "Последните 12 месеца",
+    "sq": "12 muajt e fundit"
+  },
+  "Primary unit": {
+    "en": "Primary unit",
+    "el": "Κύρια μονάδα",
+    "fr": "Unité Principale",
+    "it": "Unità Primaria",
+    "es": "Unidad Principal",
+    "pt": "Unidade Principal",
+    "bg": "Основна единица",
+    "sq": "Njësia Kryesore"
+  },
+  "Password": {
+    "en": "Password",
+    "el": "Κωδικός πρόσβασης",
+    "fr": "Mot de passe",
+    "it": "Password",
+    "es": "Contraseña",
+    "pt": "Senha",
+    "bg": "Парола",
+    "sq": "Fjalëkalimi"
+  },
+  "Planned Cleaning": {
+    "en": "Planned Cleaning",
+    "el": "Προγραμματισμένος Καθαρισμός",
+    "fr": "Nettoyage Prévu",
+    "it": "Pulizia Programmata",
+    "es": "Limpieza Planificada",
+    "pt": "Limpeza Planejada",
+    "bg": "Планирано почистване",
+    "sq": "Pastrimi i Planifikuar"
+  },
+  "Speed loss": {
+    "en": "Speed loss",
+    "el": "Απώλεια Ταχύτητας",
+    "fr": "Perte de Vitesse",
+    "it": "Perdita di Velocità",
+    "es": "Pérdida de Velocidad",
+    "pt": "Perda de Velocidade",
+    "bg": "Загуба на Скорост",
+    "sq": "Humbje Shpejtësie"
+  },
+  "Count": {
+    "en": "Count",
+    "el": "Μετρήστε",
+    "fr": "Compter",
+    "it": "Conteggio",
+    "es": "Contar",
+    "pt": "Contar",
+    "bg": "Брой",
+    "sq": "Numri"
+  },
+  "Operator Missing": {
+    "en": "Operator Missing",
+    "el": "Απουσία Χειριστή",
+    "fr": "Opérateur Manquant",
+    "it": "Operatore Mancante",
+    "es": "Operador Ausente",
+    "pt": "Operador Ausente",
+    "bg": "Липсващ Оператор",
+    "sq": "Operator i Munguar"
+  },
+  "Average duration": {
+    "en": "Average duration",
+    "el": "Μέση Διάρκεια",
+    "fr": "Durée Moyenne",
+    "it": "Durata Media",
+    "es": "Duración Media",
+    "pt": "Duração Média",
+    "bg": "Средна Продължителност",
+    "sq": "Kohëzgjatja Mesatare"
+  },
+  "Unit": {
+    "en": "Unit",
+    "el": "Μονάδα",
+    "fr": "Unité",
+    "it": "Unità",
+    "es": "Unidad",
+    "pt": "Unidade",
+    "bg": "Единица",
+    "sq": "Njësia"
+  },
+  "Lunch": {
+    "en": "Lunch",
+    "el": "Γεύμα",
+    "fr": "Déjeuner",
+    "it": "Pranzo",
+    "es": "Almuerzo",
+    "pt": "Almoço",
+    "bg": "Обяд",
+    "sq": "Drekë"
+  },
+  "16m 39s": {
+    "en": "16m 39s",
+    "el": "16λ 39δ",
+    "fr": "16m 39s",
+    "it": "16m 39s",
+    "es": "16m 39s",
+    "pt": "16m 39s",
+    "bg": "16м 39с",
+    "sq": "16m 39s"
+  },
+  "Profile": {
+    "en": "Profile",
+    "el": "Προφίλ",
+    "fr": "Profil",
+    "it": "Profilo",
+    "es": "Perfil",
+    "pt": "Perfil",
+    "bg": "Профил",
+    "sq": "Profili"
+  },
+  "Unplanned Maintenance": {
+    "en": "Unplanned Maintenance",
+    "el": "Απρογραμμάτιστη Συντήρηση",
+    "fr": "Maintenance Non Planifiée",
+    "it": "Manutenzione Non Programmata",
+    "es": "Mantenimiento No Planificado",
+    "pt": "Manutenção Não Planejada",
+    "bg": "Непланирана Поддръжка",
+    "sq": "Mirëmbajtje e Paplanifikuar"
+  },
+  "22h 22m 10s": {
+    "en": "22h 22m 10s",
+    "el": "22ώ 22λ 10δ",
+    "fr": "22h 22m 10s",
+    "it": "22h 22m 10s",
+    "es": "22h 22m 10s",
+    "pt": "22h 22m 10s",
+    "bg": "22ч 22м 10с",
+    "sq": "22or 22min 10sek"
+  },
+  "10h 19m 00s": {
+    "en": "10h 19m 00s",
+    "el": "10ώ 19λ 00δ",
+    "fr": "10h 19m 00s",
+    "it": "10h 19m 00s",
+    "es": "10h 19m 00s",
+    "pt": "10h 19m 00s",
+    "bg": "10ч 19м 00с",
+    "sq": "10or 19min 00sek"
+  },
+  "API keys": {
+    "en": "API keys",
+    "el": "API κλειδιά",
+    "fr": "Clés API",
+    "it": "Chiavi API",
+    "es": "Claves API",
+    "pt": "Chaves API",
+    "bg": "API ключове",
+    "sq": "Çelësat API"
+  },
+  "Yesterday": {
+    "en": "Yesterday",
+    "el": "Χθες",
+    "fr": "Hier",
+    "it": "Ieri",
+    "es": "Ayer",
+    "pt": "Ontem",
+    "bg": "Вчера",
+    "sq": "Dje"
+  },
+  "Planned": {
+    "en": "Planned",
+    "el": "Προγραμματισμένο",
+    "fr": "Prévu",
+    "it": "Pianificato",
+    "es": "Planificado",
+    "pt": "Planejado",
+    "bg": "Планирано",
+    "sq": "E planifikuar"
+  },
+  "Split by: -": {
+    "en": "Split by: -",
+    "el": "Διαχωρισμός κατά: -",
+    "fr": "Divisé par : -",
+    "it": "Diviso per: -",
+    "es": "Dividido por: -",
+    "pt": "Dividido por: -",
+    "bg": "Разделено по: -",
+    "sq": "Ndara sipas: -"
+  },
+  "Notes": {
+    "en": "Notes",
+    "el": "Σημειώσεις",
+    "fr": "Notes",
+    "it": "Note",
+    "es": "Notas",
+    "pt": "Notas",
+    "bg": "Бележки",
+    "sq": "Shënime"
+  },
+  "26m": {
+    "en": "26m",
+    "el": "26λ",
+    "fr": "26m",
+    "it": "26m",
+    "es": "26m",
+    "pt": "26m",
+    "bg": "26м",
+    "sq": "26min"
+  },
+  "Last week": {
+    "en": "Last week",
+    "el": "Προηγούμενη εβδομάδα",
+    "fr": "La semaine dernière",
+    "it": "Settimana scorsa",
+    "es": "La semana pasada",
+    "pt": "Semana passada",
+    "bg": "Миналата седмица",
+    "sq": "Java e kaluar"
+  },
+  "09m 58s": {
+    "en": "09m 58s",
+    "el": "09λ 58δ",
+    "fr": "09m 58s",
+    "it": "09m 58s",
+    "es": "09m 58s",
+    "pt": "09m 58s",
+    "bg": "09м 58с",
+    "sq": "09min 58sek"
+  },
+  "2h 02m 00s": {
+    "en": "2h 02m 00s",
+    "el": "2ώ 02λ 00δ",
+    "fr": "2h 02m 00s",
+    "it": "2h 02m 00s",
+    "es": "2h 02m 00s",
+    "pt": "2h 02m 00s",
+    "bg": "2ч 02м 00с",
+    "sq": "2or 02min 00sek"
+  },
+  "Conveyor Breakdown": {
+    "en": "Conveyor Breakdown",
+    "el": "Βλάβη Μεταφορικής Ταινίας",
+    "fr": "Panne de Convoyeur",
+    "it": "Guasto del Nastro Trasportatore",
+    "es": "Fallo del Transportador",
+    "pt": "Quebra do Transportador",
+    "bg": "Повреда на Лентата",
+    "sq": "Prishja e Transportuesit"
+  },
+  "Save": {
+    "en": "Save",
+    "el": "Αποθήκευση",
+    "fr": "Enregistrer",
+    "it": "Salva",
+    "es": "Guardar",
+    "pt": "Salvar",
+    "bg": "Запази",
+    "sq": "Ruaj"
+  },
+  "Time format": {
+    "en": "Time format",
+    "el": "Μορφή Χρόνου",
+    "fr": "Format de Temps",
+    "it": "Formato Orario",
+    "es": "Formato de Tiempo",
+    "pt": "Formato de Hora",
+    "bg": "Формат на Времето",
+    "sq": "Formati i Kohës"
+  },
+  "Standby": {
+    "en": "Standby",
+    "el": "Αναμονή",
+    "fr": "En Attente",
+    "it": "In Attesa",
+    "es": "En Espera",
+    "pt": "Em Espera",
+    "bg": "В очакване",
+    "sq": "Në pritje"
+  },
+  "Product Changeover": {
+    "en": "Product Changeover",
+    "el": "Αλλαγή Προϊόντος",
+    "fr": "Changement de Produit",
+    "it": "Cambio Prodotto",
+    "es": "Cambio de Producto",
+    "pt": "Mudança de Produto",
+    "bg": "Смяна на Продукта",
+    "sq": "Ndryshimi i Produktit"
+  },
+  "Search": {
+    "en": "Search",
+    "el": "Αναζήτηση",
+    "fr": "Recherche",
+    "it": "Cerca",
+    "es": "Buscar",
+    "pt": "Pesquisar",
+    "bg": "Търсене",
+    "sq": "Kërko"
+  },
+  "1h 01m 54s": {
+    "en": "1h 01m 54s",
+    "el": "1ώ 01λ 54δ",
+    "fr": "1h 01m 54s",
+    "it": "1h 01m 54s",
+    "es": "1h 01m 54s",
+    "pt": "1h 01m 54s",
+    "bg": "1ч 01м 54с",
+    "sq": "1or 01min 54sek"
+  },
+  "Previous shift": {
+    "en": "Previous shift",
+    "el": "Προηγούμενη βάρδια",
+    "fr": "Équipe précédente",
+    "it": "Turno precedente",
+    "es": "Turno anterior",
+    "pt": "Turno anterior",
+    "bg": "Предишна смяна",
+    "sq": "Ndërrimi i kaluar"
+  },
+  "CNC Machine": {
+    "en": "CNC Machine",
+    "el": "CNC Μηχανή",
+    "fr": "Machine CNC",
+    "it": "Macchina CNC",
+    "es": "Máquina CNC",
+    "pt": "Máquina CNC",
+    "bg": "CNC машина",
+    "sq": "Makinë CNC"
+  },
+  "Target reached": {
+    "en": "Target reached",
+    "el": "Στόχος επιτεύχθηκε",
+    "fr": "Objectif atteint",
+    "it": "Obiettivo raggiunto",
+    "es": "Objetivo alcanzado",
+    "pt": "Meta alcançada",
+    "bg": "Целта е постигната",
+    "sq": "Qëllimi arritur"
+  },
+  "Next station": {
+    "en": "Next station",
+    "el": "Επόμενος σταθμός",
+    "fr": "Prochaine station",
+    "it": "Prossima stazione",
+    "es": "Próxima estación",
+    "pt": "Próxima estação",
+    "bg": "Следваща станция",
+    "sq": "Stacioni tjetër"
+  },
+  "Add widget": {
+    "en": "Add widget",
+    "el": "Προσθήκη widget",
+    "fr": "Ajouter un widget",
+    "it": "Aggiungi widget",
+    "es": "Agregar widget",
+    "pt": "Adicionar widget",
+    "bg": "Добавяне на widget",
+    "sq": "Shto widget"
+  },
+  "Techincal Ultimate Failure": {
+    "en": "Techincal Ultimate Failure",
+    "el": "Τεχνική Απόλυτη Αποτυχία",
+    "fr": "Échec technique ultime",
+    "it": "Guasto tecnico definitivo",
+    "es": "Fallo técnico definitivo",
+    "pt": "Falha técnica definitiva",
+    "bg": "Техническа крайна повреда",
+    "sq": "Dështim teknik përfundimtar"
+  },
+  "OEE & Downtime": {
+    "en": "OEE & Downtime",
+    "el": "OEE & Χρόνος αδράνειας",
+    "fr": "OEE & Temps d'arrêt",
+    "it": "OEE & Tempo di inattività",
+    "es": "OEE & Tiempo de inactividad",
+    "pt": "OEE & Tempo de inatividade",
+    "bg": "OEE & Време на престой",
+    "sq": "OEE & Koha e papunësisë"
+  },
+  "Material Shortage": {
+    "en": "Material Shortage",
+    "el": "Έλλειψη Υλικών",
+    "fr": "Pénurie de matériel",
+    "it": "Carenza di materiale",
+    "es": "Escasez de material",
+    "pt": "Falta de material",
+    "bg": "Недостиг на материали",
+    "sq": "Mungesë materiali"
+  },
+  "29h 25m 25s": {
+    "en": "29h 25m 25s",
+    "el": "29ώ 25λ 25δ",
+    "fr": "29h 25m 25s",
+    "it": "29h 25m 25s",
+    "es": "29h 25m 25s",
+    "pt": "29h 25m 25s",
+    "bg": "29ч 25м 25с",
+    "sq": "29or 25min 25sek"
+  },
+  "Share": {
+    "en": "Share",
+    "el": "Κοινοποίηση",
+    "fr": "Partager",
+    "it": "Condividi",
+    "es": "Compartir",
+    "pt": "Compartilhar",
+    "bg": "Сподели",
+    "sq": "Ndaj"
+  },
+  "Product changeover": {
+    "en": "Product changeover",
+    "el": "Αλλαγή προϊόντος",
+    "fr": "Changement de produit",
+    "it": "Cambio prodotto",
+    "es": "Cambio de producto",
+    "pt": "Mudança de produto",
+    "bg": "Смяна на продукт",
+    "sq": "Ndërrimi i produktit"
+  },
+  "Since changeover / Target": {
+    "en": "Since changeover / Target",
+    "el": "Από την αλλαγή / Στόχος",
+    "fr": "Depuis le changement / Objectif",
+    "it": "Dalla sostituzione / Obiettivo",
+    "es": "Desde el cambio / Objetivo",
+    "pt": "Desde a mudança / Meta",
+    "bg": "От смяната / Цел",
+    "sq": "Që nga ndërrimi / Qëllimi"
+  },
+  "Number of decimals %": {
+    "en": "Number of decimals %",
+    "el": "Αριθμός δεκαδικών %",
+    "fr": "Nombre de décimales %",
+    "it": "Numero di decimali %",
+    "es": "Número de decimales %",
+    "pt": "Número de casas decimais %",
+    "bg": "Брой десетични знаци %",
+    "sq": "Numri i decimalëve %"
+  },
+  "All": {
+    "en": "All",
+    "el": "Όλα",
+    "fr": "Tout",
+    "it": "Tutti",
+    "es": "Todo",
+    "pt": "Todos",
+    "bg": "Всички",
+    "sq": "Të gjitha"
+  },
+  "Product groups": {
+    "en": "Product groups",
+    "el": "Ομάδες προϊόντων",
+    "fr": "Groupes de produits",
+    "it": "Gruppi di prodotti",
+    "es": "Grupos de productos",
+    "pt": "Grupos de produtos",
+    "bg": "Групи продукти",
+    "sq": "Grupet e produkteve"
+  },
+  "Marsellus Wallace, Vincent Vega": {
+    "en": "Marsellus Wallace, Vincent Vega",
+    "el": "Marsellus Wallace, Vincent Vega",
+    "fr": "Marsellus Wallace, Vincent Vega",
+    "it": "Marsellus Wallace, Vincent Vega",
+    "es": "Marsellus Wallace, Vincent Vega",
+    "pt": "Marsellus Wallace, Vincent Vega",
+    "bg": "Marsellus Wallace, Vincent Vega",
+    "sq": "Marsellus Wallace, Vincent Vega"
+  },
+  "Loss (primary unit)": {
+    "en": "Loss (primary unit)",
+    "el": "Απώλεια (κύρια μονάδα)",
+    "fr": "Perte (unité principale)",
+    "it": "Perdita (unità principale)",
+    "es": "Pérdida (unidad principal)",
+    "pt": "Perda (unidade principal)",
+    "bg": "Загуба (основна единица)",
+    "sq": "Humbje (njësia kryesore)"
+  },
+  "Shift OEE": {
+    "en": "Shift OEE",
+    "el": "OEE βάρδιας",
+    "fr": "OEE de l'équipe",
+    "it": "OEE di turno",
+    "es": "OEE de turno",
+    "pt": "OEE de turno",
+    "bg": "OEE на смяна",
+    "sq": "OEE e ndërrimit"
+  },
+  "2nd Y-axis: -": {
+    "en": "2nd Y-axis: -",
+    "el": "2η άξονας Y: -",
+    "fr": "2ème axe Y : -",
+    "it": "2° asse Y: -",
+    "es": "2º eje Y: -",
+    "pt": "2º eixo Y: -",
+    "bg": "2ри Y-ос: -",
+    "sq": "Eksi i dyt Y: -"
+  },
+  "Maintenance": {
+    "en": "Maintenance",
+    "el": "Συντήρηση",
+    "fr": "Maintenance",
+    "it": "Manutenzione",
+    "es": "Mantenimiento",
+    "pt": "Manutenção",
+    "bg": "Поддръжка",
+    "sq": "Mirëmbajtje"
+  },
+  "2h 10m": {
+    "en": "2h 10m",
+    "el": "2ώ 10λ",
+    "fr": "2h 10m",
+    "it": "2h 10m",
+    "es": "2h 10m",
+    "pt": "2h 10m",
+    "bg": "2ч 10м",
+    "sq": "2or 10min"
+  },
+  "Next shift": {
+    "en": "Next shift",
+    "el": "Επόμενη βάρδια",
+    "fr": "Prochaine équipe",
+    "it": "Prossimo turno",
+    "es": "Próxima turno",
+    "pt": "Próxima turno",
+    "bg": "Следваща смяна",
+    "sq": "Ndërrimi tjetër"
+  },
+  "Scrap reasons": {
+    "en": "Scrap reasons",
+    "el": "Λόγοι απόρριψης",
+    "fr": "Raisons de rebut",
+    "it": "Motivi di scarto",
+    "es": "Razones de chatarra",
+    "pt": "Razões de sucata",
+    "bg": "Причини за отпадъци",
+    "sq": "Arsyet e hedhjes"
+  },
+  "Two-factor authentication": {
+    "en": "Two-factor authentication",
+    "el": "Επαλήθευση δύο παραγόντων",
+    "fr": "Authentification à deux facteurs",
+    "it": "Autenticazione a due fattori",
+    "es": "Autenticación de dos factores",
+    "pt": "Autenticação de dois fatores",
+    "bg": "Двуфакторна автентикация",
+    "sq": "Autentifikimi me dy faktorë"
+  },
+  "Performance": {
+    "en": "Performance",
+    "el": "Απόδοση",
+    "fr": "Performance",
+    "it": "Prestazioni",
+    "es": "Rendimiento",
+    "pt": "Desempenho",
+    "bg": "Производителност",
+    "sq": "Performanca"
+  },
+  "Stations": {
+    "en": "Stations",
+    "el": "Σταθμοί",
+    "fr": "Stations",
+    "it": "Stazioni",
+    "es": "Estaciones",
+    "pt": "Estações",
+    "bg": "Станции",
+    "sq": "Stacionet"
+  },
+  "Previous station": {
+    "en": "Previous station",
+    "el": "Προηγούμενος σταθμός",
+    "fr": "Station précédente",
+    "it": "Stazione precedente",
+    "es": "Estación anterior",
+    "pt": "Estação anterior",
+    "bg": "Предишна станция",
+    "sq": "Stacioni i mëparshëm"
+  },
+  "View settings": {
+    "en": "View settings",
+    "el": "Ρυθμίσεις προβολής",
+    "fr": "Paramètres d'affichage",
+    "it": "Impostazioni di visualizzazione",
+    "es": "Configuración de vista",
+    "pt": "Configurações de visualização",
+    "bg": "Настройки на изгледа",
+    "sq": "Cilësimet e shikimit"
+  },
+  "08m 17s": {
+    "en": "08m 17s",
+    "el": "08λ 17δ",
+    "fr": "08m 17s",
+    "it": "08m 17s",
+    "es": "08m 17s",
+    "pt": "08m 17s",
+    "bg": "08м 17с",
+    "sq": "08min 17sek"
+  },
+  "Settings logs": {
+    "en": "Settings logs",
+    "el": "Αρχεία ρυθμίσεων",
+    "fr": "Journaux des paramètres",
+    "it": "Registri delle impostazioni",
+    "es": "Registros de configuración",
+    "pt": "Registros de configurações",
+    "bg": "Логове на настройките",
+    "sq": "Regjistrat e cilësimeve"
+  },
+  "Activity logs": {
+    "en": "Activity logs",
+    "el": "Αρχεία δραστηριότητας",
+    "fr": "Journaux d'activité",
+    "it": "Registri delle attività",
+    "es": "Registros de actividad",
+    "pt": "Registros de atividade",
+    "bg": "Логове на активността",
+    "sq": "Regjistrat e aktiviteteve"
+  },
+  "CNC Machine, Group A, Group B, Group C": {
+    "en": "CNC Machine, Group A, Group B, Group C",
+    "el": "CNC Μηχανή, Ομάδα Α, Ομάδα Β, Ομάδα Γ",
+    "fr": "Machine CNC, Groupe A, Groupe B, Groupe C",
+    "it": "Macchina CNC, Gruppo A, Gruppo B, Gruppo C",
+    "es": "Máquina CNC, Grupo A, Grupo B, Grupo C",
+    "pt": "Máquina CNC, Grupo A, Grupo B, Grupo C",
+    "bg": "CNC машина, Група А, Група Б, Група В",
+    "sq": "Makinë CNC, Grupi A, Grupi B, Grupi C"
+  },
+  "13m 32s": {
+    "en": "13m 32s",
+    "el": "13λ 32δ",
+    "fr": "13m 32s",
+    "it": "13m 32s",
+    "es": "13m 32s",
+    "pt": "13m 32s",
+    "bg": "13м 32с",
+    "sq": "13min 32sek"
+  },
+  "Current shift": {
+    "en": "Current shift",
+    "el": "Τρέχουσα βάρδια",
+    "fr": "Équipe actuelle",
+    "it": "Turno attuale",
+    "es": "Turno actual",
+    "pt": "Turno atual",
+    "bg": "Текуща смяна",
+    "sq": "Ndërrimi aktual"
+  },
+  "Factories": {
+    "en": "Factories",
+    "el": "Εργοστάσια",
+    "fr": "Usines",
+    "it": "Fabbriche",
+    "es": "Fábricas",
+    "pt": "Fábricas",
+    "bg": "Фабрики",
+    "sq": "Fabrikat"
+  },
+  "Number format": {
+    "en": "Number format",
+    "el": "Μορφή αριθμού",
+    "fr": "Format de nombre",
+    "it": "Formato numero",
+    "es": "Formato de número",
+    "pt": "Formato de número",
+    "bg": "Формат на число",
+    "sq": "Formati i numrit"
+  },
+  "1h 4m": {
+    "en": "1h 4m",
+    "el": "1ώ 4λ",
+    "fr": "1h 4m",
+    "it": "1h 4m",
+    "es": "1h 4m",
+    "pt": "1h 4m",
+    "bg": "1ч 4м",
+    "sq": "1or 4min"
+  },
+  "Stations:  21": {
+    "en": "Stations:  21",
+    "el": "Σταθμοί: 21",
+    "fr": "Stations : 21",
+    "it": "Stazioni: 21",
+    "es": "Estaciones: 21",
+    "pt": "Estações: 21",
+    "bg": "Станции: 21",
+    "sq": "Stacionet: 21"
+  },
+  "Shifts": {
+    "en": "Shifts",
+    "el": "Βάρδιες",
+    "fr": "Équipes",
+    "it": "Turni",
+    "es": "Turnos",
+    "pt": "Turnos",
+    "bg": "Смени",
+    "sq": "Ndërrimet"
+  },
+  "288h 45m 41s": {
+    "en": "288h 45m 41s",
+    "el": "288ώ 45λ 41δ",
+    "fr": "288h 45m 41s",
+    "it": "288h 45m 41s",
+    "es": "288h 45m 41s",
+    "pt": "288h 45m 41s",
+    "bg": "288ч 45м 41с",
+    "sq": "288or 45min 41sek"
+  },
+  "Learn more": {
+    "en": "Learn more",
+    "el": "Μάθετε περισσότερα",
+    "fr": "En savoir plus",
+    "it": "Scopri di più",
+    "es": "Aprender más",
+    "pt": "Saiba mais",
+    "bg": "Научете повече",
+    "sq": "Mëso më shumë"
+  },
+  "Tags": {
+    "en": "Tags",
+    "el": "Ετικέτες",
+    "fr": "Étiquettes",
+    "it": "Tag",
+    "es": "Etiquetas",
+    "pt": "Etiquetas",
+    "bg": "Етикети",
+    "sq": "Etiketat"
+  },
+  "Group": {
+    "en": "Group",
+    "el": "Ομάδα",
+    "fr": "Groupe",
+    "it": "Gruppo",
+    "es": "Grupo",
+    "pt": "Grupo",
+    "bg": "Група",
+    "sq": "Grupi"
+  },
+  "16m": {
+    "en": "16m",
+    "el": "16μ",
+    "fr": "16m",
+    "it": "16m",
+    "es": "16m",
+    "pt": "16m",
+    "bg": "16м",
+    "sq": "16m"
+  },
+  "Timeline": {
+    "en": "Timeline",
+    "el": "Χρονοδιάγραμμα",
+    "fr": "Chronologie",
+    "it": "Cronologia",
+    "es": "Línea de tiempo",
+    "pt": "Linha do tempo",
+    "bg": "Хронология",
+    "sq": "Kronologjia"
+  },
+  "Quantities": {
+    "en": "Quantities",
+    "el": "Ποσότητες",
+    "fr": "Quantités",
+    "it": "Quantità",
+    "es": "Cantidades",
+    "pt": "Quantidades",
+    "bg": "Количество",
+    "sq": "Sasi"
+  },
+  "11h 08m 40s": {
+    "en": "11h 08m 40s",
+    "el": "11ώ 08λ 40δ",
+    "fr": "11h 08m 40s",
+    "it": "11h 08m 40s",
+    "es": "11h 08m 40s",
+    "pt": "11h 08m 40s",
+    "bg": "11ч 08м 40с",
+    "sq": "11or 08min 40sek"
+  },
+  "Time usage": {
+    "en": "Time usage",
+    "el": "Χρήση χρόνου",
+    "fr": "Utilisation du temps",
+    "it": "Utilizzo del tempo",
+    "es": "Uso del tiempo",
+    "pt": "Uso do tempo",
+    "bg": "Използване на време",
+    "sq": "Përdorimi i kohës"
+  },
+  "(Total)": {
+    "en": "(Total)",
+    "el": "(Σύνολο)",
+    "fr": "(Total)",
+    "it": "(Totale)",
+    "es": "(Total)",
+    "pt": "(Total)",
+    "bg": "(Общо)",
+    "sq": "(Totali)"
+  },
+  "No active shift": {
+    "en": "No active shift",
+    "el": "Δεν υπάρχει ενεργή βάρδια",
+    "fr": "Aucune équipe active",
+    "it": "Nessun turno attivo",
+    "es": "Sin turno activo",
+    "pt": "Sem turno ativo",
+    "bg": "Няма активна смяна",
+    "sq": "Nuk ka ndërrim aktiv"
+  },
+  "4h 04m 00s": {
+    "en": "4h 04m 00s",
+    "el": "4ώ 04λ 00δ",
+    "fr": "4h 04m 00s",
+    "it": "4h 04m 00s",
+    "es": "4h 04m 00s",
+    "pt": "4h 04m 00s",
+    "bg": "4ч 04м 00с",
+    "sq": "4or 04min 00sek"
+  },
+  "Date format": {
+    "en": "Date format",
+    "el": "Μορφή ημερομηνίας",
+    "fr": "Format de date",
+    "it": "Formato data",
+    "es": "Formato de fecha",
+    "pt": "Formato de data",
+    "bg": "Формат на дата",
+    "sq": "Formati i datës"
+  },
+  "Next week": {
+    "en": "Next week",
+    "el": "Επόμενη εβδομάδα",
+    "fr": "Semaine prochaine",
+    "it": "Prossima settimana",
+    "es": "Próxima semana",
+    "pt": "Próxima semana",
+    "bg": "Следваща седмица",
+    "sq": "Java tjetër"
+  },
+  "Speed loss reasons": {
+    "en": "Speed loss reasons",
+    "el": "Λόγοι απώλειας ταχύτητας",
+    "fr": "Raisons de perte de vitesse",
+    "it": "Motivi di perdita di velocità",
+    "es": "Razones de pérdida de velocidad",
+    "pt": "Razões para perda de velocidade",
+    "bg": "Причини за загуба на скорост",
+    "sq": "Arsyet e humbjes së shpejtësisë"
+  },
+  "11m 06s": {
+    "en": "11m 06s",
+    "el": "11λ 06δ",
+    "fr": "11m 06s",
+    "it": "11m 06s",
+    "es": "11m 06s",
+    "pt": "11m 06s",
+    "bg": "11м 06с",
+    "sq": "11min 06sek"
+  },
+  "Estimated time of completion": {
+    "en": "Estimated time of completion",
+    "el": "Εκτιμώμενος χρόνος ολοκλήρωσης",
+    "fr": "Temps estimé de réalisation",
+    "it": "Tempo stimato di completamento",
+    "es": "Tiempo estimado de finalización",
+    "pt": "Tempo estimado de conclusão",
+    "bg": "Оценено време за завършване",
+    "sq": "Koha e parashikuar për përfundim"
+  },
+  "13h 20m 00s": {
+    "en": "13h 20m 00s",
+    "el": "13ώ 20λ 00δ",
+    "fr": "13h 20m 00s",
+    "it": "13h 20m 00s",
+    "es": "13h 20m 00s",
+    "pt": "13h 20m 00s",
+    "bg": "13ч 20м 00с",
+    "sq": "13or 20min 00sek"
+  },
+  "Product": {
+    "en": "Product",
+    "el": "Προϊόν",
+    "fr": "Produit",
+    "it": "Prodotto",
+    "es": "Producto",
+    "pt": "Produto",
+    "bg": "Продукт",
+    "sq": "Produkti"
+  },
+  "Last year": {
+    "en": "Last year",
+    "el": "Πέρυσι",
+    "fr": "L'année dernière",
+    "it": "L'anno scorso",
+    "es": "El año pasado",
+    "pt": "Ano passado",
+    "bg": "Миналата година",
+    "sq": "Viti i kaluar"
+  },
+  "15m 33s": {
+    "en": "15m 33s",
+    "el": "15λ 33δ",
+    "fr": "15m 33s",
+    "it": "15m 33s",
+    "es": "15m 33s",
+    "pt": "15m 33s",
+    "bg": "15м 33с",
+    "sq": "15min 33sek"
+  },
+  "Username": {
+    "en": "Username",
+    "el": "Όνομα χρήστη",
+    "fr": "Nom d'utilisateur",
+    "it": "Nome utente",
+    "es": "Nombre de usuario",
+    "pt": "Nome de usuário",
+    "bg": "Потребителско име",
+    "sq": "Emri i përdoruesit"
+  },
+  "Change password": {
+    "en": "Change password",
+    "el": "Αλλαγή κωδικού",
+    "fr": "Changer le mot de passe",
+    "it": "Cambia password",
+    "es": "Cambiar contraseña",
+    "pt": "Alterar senha",
+    "bg": "Смяна на парола",
+    "sq": "Ndrysho fjalëkalimin"
+  },
+  "10h 42m 40s": {
+    "en": "10h 42m 40s",
+    "el": "10ώ 42λ 40δ",
+    "fr": "10h 42m 40s",
+    "it": "10h 42m 40s",
+    "es": "10h 42m 40s",
+    "pt": "10h 42m 40s",
+    "bg": "10ч 42м 40с",
+    "sq": "10or 42min 40sek"
+  },
+  "Shift view": {
+    "en": "Shift view",
+    "el": "Προβολή βάρδιας",
+    "fr": "Vue de l'équipe",
+    "it": "Visualizzazione turno",
+    "es": "Vista de turno",
+    "pt": "Visualização de turno",
+    "bg": "Преглед на смяната",
+    "sq": "Pamja e ndërrimit"
+  },
+  "Alternative unit": {
+    "en": "Alternative unit",
+    "el": "Εναλλακτική μονάδα",
+    "fr": "Unité alternative",
+    "it": "Unità alternativa",
+    "es": "Unidad alternativa",
+    "pt": "Unidade alternativa",
+    "bg": "Алтернативна единица",
+    "sq": "Njësia alternative"
+  },
+  "12m 19s": {
+    "en": "12m 19s",
+    "el": "12λ 19δ",
+    "fr": "12m 19s",
+    "it": "12m 19s",
+    "es": "12m 19s",
+    "pt": "12m 19s",
+    "bg": "12м 19с",
+    "sq": "12min 19sek"
+  },
+  "Electrical Failure": {
+    "en": "Electrical Failure",
+    "el": "Ηλεκτρική βλάβη",
+    "fr": "Défaillance électrique",
+    "it": "Guasto elettrico",
+    "es": "Fallo eléctrico",
+    "pt": "Falha elétrica",
+    "bg": "Електрическа повреда",
+    "sq": "Dështim elektrik"
+  },
+  "Get a complete overview of who did what and when in Evocon.": {
+    "en": "Get a complete overview of who did what and when in Evocon.",
+    "el": "Αποκτήστε μια πλήρη εικόνα του ποιος έκανε τι και πότε στο Evocon.",
+    "fr": "Obtenez un aperçu complet de qui a fait quoi et quand dans Evocon.",
+    "it": "Ottieni una panoramica completa di chi ha fatto cosa e quando in Evocon.",
+    "es": "Obtén una visión completa de quién hizo qué y cuándo en Evocon.",
+    "pt": "Obtenha uma visão completa de quem fez o quê e quando no Evocon.",
+    "bg": "Получете пълен преглед на това кой какво е направил и кога в Evocon.",
+    "sq": "Merrni një pasqyrë të plotë se kush bëri çfarë dhe kur në Evocon."
+  },
+  "Name": {
+    "en": "Name",
+    "el": "Όνομα",
+    "fr": "Nom",
+    "it": "Nome",
+    "es": "Nombre",
+    "pt": "Nome",
+    "bg": "Име",
+    "sq": "Emri"
+  },
+  "04m 00s": {
+    "en": "04m 00s",
+    "el": "04λ 00δ",
+    "fr": "04m 00s",
+    "it": "04m 00s",
+    "es": "04m 00s",
+    "pt": "04m 00s",
+    "bg": "04м 00с",
+    "sq": "04min 00sek"
+  },
+  "Default station": {
+    "en": "Default station",
+    "el": "Προεπιλεγμένος σταθμός",
+    "fr": "Station par défaut",
+    "it": "Stazione predefinita",
+    "es": "Estación predeterminada",
+    "pt": "Estação padrão",
+    "bg": "Стандартна станция",
+    "sq": "Stacioni parazgjedhur"
+  },
+  "Supplies Missing": {
+    "en": "Supplies Missing",
+    "el": "Απουσία προμηθειών",
+    "fr": "Fournitures manquantes",
+    "it": "Forniture mancanti",
+    "es": "Suministros faltantes",
+    "pt": "Suprimentos em falta",
+    "bg": "Липсващи доставки",
+    "sq": "Mungesë furnizimesh"
+  },
+  "Alerts": {
+    "en": "Alerts",
+    "el": "Ειδοποιήσεις",
+    "fr": "Alertes",
+    "it": "Avvisi",
+    "es": "Alertas",
+    "pt": "Alertas",
+    "bg": "Предупреждения",
+    "sq": "Alarmet"
+  },
+  "14h 49m 43s": {
+    "en": "14h 49m 43s",
+    "el": "14ώ 49λ 43δ",
+    "fr": "14h 49m 43s",
+    "it": "14h 49m 43s",
+    "es": "14h 49m 43s",
+    "pt": "14h 49m 43s",
+    "bg": "14ч 49м 43с",
+    "sq": "14or 49min 43sek"
+  },
+  "Group B": {
+    "en": "Group B",
+    "el": "Ομάδα Β",
+    "fr": "Groupe B",
+    "it": "Gruppo B",
+    "es": "Grupo B",
+    "pt": "Grupo B",
+    "bg": "Група Б",
+    "sq": "Grupi B"
+  },
+  "Stopped": {
+    "en": "Stopped",
+    "el": "Σταμάτησε",
+    "fr": "Arrêté",
+    "it": "Fermato",
+    "es": "Detenido",
+    "pt": "Parado",
+    "bg": "Спряно",
+    "sq": "Ndaluar"
+  },
+  "Last 7 days": {
+    "en": "Last 7 days",
+    "el": "Τελευταίες 7 ημέρες",
+    "fr": "Derniers 7 jours",
+    "it": "Ultimi 7 giorni",
+    "es": "Últimos 7 días",
+    "pt": "Últimos 7 dias",
+    "bg": "Последните 7 дни",
+    "sq": "7 ditët e fundit"
+  },
+  "Station groups": {
+    "en": "Station groups",
+    "el": "Ομάδες σταθμών",
+    "fr": "Groupes de stations",
+    "it": "Gruppi di stazioni",
+    "es": "Grupos de estaciones",
+    "pt": "Grupos de estações",
+    "bg": "Групи станции",
+    "sq": "Grupet e stacioneve"
+  },
+  "Batch Process": {
+    "en": "Batch Process",
+    "el": "Διαδικασία παρτίδας",
+    "fr": "Processus par lot",
+    "it": "Processo batch",
+    "es": "Proceso por lotes",
+    "pt": "Processo em lote",
+    "bg": "Процес на партида",
+    "sq": "Procesi i grumbullit"
+  },
+  "27m 51s": {
+    "en": "27m 51s",
+    "el": "27λ 51δ",
+    "fr": "27m 51s",
+    "it": "27m 51s",
+    "es": "27m 51s",
+    "pt": "27m 51s",
+    "bg": "27м 51с",
+    "sq": "27min 51sek"
+  },
+  "Saved reports will appear here": {
+    "en": "Saved reports will appear here",
+    "el": "Οι αποθηκευμένες αναφορές θα εμφανιστούν εδώ",
+    "fr": "Les rapports enregistrés apparaîtront ici",
+    "it": "I rapporti salvati appariranno qui",
+    "es": "Los informes guardados aparecerán aquí",
+    "pt": "Os relatórios salvos aparecerão aqui",
+    "bg": "Записаните отчети ще се появят тук",
+    "sq": "Raportet e ruajtura do të shfaqen këtu"
+  },
+  "Edit": {
+    "en": "Edit",
+    "el": "Επεξεργασία",
+    "fr": "Modifier",
+    "it": "Modifica",
+    "es": "Editar",
+    "pt": "Editar",
+    "bg": "Редактиране",
+    "sq": "Redakto"
+  },
+  "Machining": {
+    "en": "Machining",
+    "el": "Μηχανουργική",
+    "fr": "Usinage",
+    "it": "Lavorazione",
+    "es": "Mecanizado",
+    "pt": "Usinagem",
+    "bg": "Обработка",
+    "sq": "Përpunim"
+  },
+  "3h 7m": {
+    "en": "3h 7m",
+    "el": "3ώ 7λ",
+    "fr": "3h 7m",
+    "it": "3h 7m",
+    "es": "3h 7m",
+    "pt": "3h 7m",
+    "bg": "3ч 7м",
+    "sq": "3orë 7min"
+  },
+  "Stop groups": {
+    "en": "Stop groups",
+    "el": "Ομάδες διακοπής",
+    "fr": "Groupes d'arrêt",
+    "it": "Gruppi di arresto",
+    "es": "Grupos de parada",
+    "pt": "Grupos de parada",
+    "bg": "Групи за спиране",
+    "sq": "Grupet e ndalimit"
+  },
+  "Language": {
+    "en": "Language",
+    "el": "Γλώσσα",
+    "fr": "Langue",
+    "it": "Lingua",
+    "es": "Idioma",
+    "pt": "Idioma",
+    "bg": "Език",
+    "sq": "Gjuha"
+  },
+  "Duration (incl. in OEE)": {
+    "en": "Duration (incl. in OEE)",
+    "el": "Διάρκεια (συμπ. στο OEE)",
+    "fr": "Durée (incl. dans OEE)",
+    "it": "Durata (incl. in OEE)",
+    "es": "Duración (incl. en OEE)",
+    "pt": "Duração (incl. no OEE)",
+    "bg": "Продължителност (вкл. в OEE)",
+    "sq": "Kohëzgjatja (përfshirë në OEE)"
+  },
+  "Work On Another Machine": {
+    "en": "Work On Another Machine",
+    "el": "Εργασία σε άλλη μηχανή",
+    "fr": "Travailler sur une autre machine",
+    "it": "Lavorare su un'altra macchina",
+    "es": "Trabajar en otra máquina",
+    "pt": "Trabalhar em outra máquina",
+    "bg": "Работа на друга машина",
+    "sq": "Puna në një makinë tjetër"
+  },
+  "4h 55m": {
+    "en": "4h 55m",
+    "el": "4ώ 55λ",
+    "fr": "4h 55m",
+    "it": "4h 55m",
+    "es": "4h 55m",
+    "pt": "4h 55m",
+    "bg": "4ч 55м",
+    "sq": "4orë 55min"
+  },
+  "2h 29m 50s": {
+    "en": "2h 29m 50s",
+    "el": "2ώ 29λ 50δ",
+    "fr": "2h 29m 50s",
+    "it": "2h 29m 50s",
+    "es": "2h 29m 50s",
+    "pt": "2h 29m 50s",
+    "bg": "2ч 29м 50с",
+    "sq": "2orë 29min 50sek"
+  },
+  "6h 30m 00s": {
+    "en": "6h 30m 00s",
+    "el": "6ώ 30λ 00δ",
+    "fr": "6h 30m 00s",
+    "it": "6h 30m 00s",
+    "es": "6h 30m 00s",
+    "pt": "6h 30m 00s",
+    "bg": "6ч 30м 00с",
+    "sq": "6orë 30min 00sek"
+  },
+  "No Planned Production": {
+    "en": "No Planned Production",
+    "el": "Καμία προγραμματισμένη παραγωγή",
+    "fr": "Aucune production planifiée",
+    "it": "Nessuna produzione pianificata",
+    "es": "No hay producción planificada",
+    "pt": "Sem produção planejada",
+    "bg": "Няма планирано производство",
+    "sq": "Nuk ka prodhim të planifikuar"
+  },
+  "11m 12s": {
+    "en": "11m 12s",
+    "el": "11λ 12δ",
+    "fr": "11m 12s",
+    "it": "11m 12s",
+    "es": "11m 12s",
+    "pt": "11m 12s",
+    "bg": "11м 12с",
+    "sq": "11min 12sek"
+  },
+  "Email": {
+    "en": "Email",
+    "el": "Email",
+    "fr": "Email",
+    "it": "Email",
+    "es": "Email",
+    "pt": "Email",
+    "bg": "Email",
+    "sq": "Email"
+  },
+  "11m 09s": {
+    "en": "11m 09s",
+    "el": "11λ 09δ",
+    "fr": "11m 09s",
+    "it": "11m 09s",
+    "es": "11m 09s",
+    "pt": "11m 09s",
+    "bg": "11м 09с",
+    "sq": "11min 09sek"
+  },
+  "Stop types": {
+    "en": "Stop types",
+    "el": "Τύποι διακοπής",
+    "fr": "Types d'arrêt",
+    "it": "Tipi di arresto",
+    "es": "Tipos de parada",
+    "pt": "Tipos de parada",
+    "bg": "Типове спиране",
+    "sq": "Llojet e ndalimit"
+  },
+  "OEE (60%)": {
+    "en": "OEE (60%)",
+    "el": "OEE (60%)",
+    "fr": "OEE (60%)",
+    "it": "OEE (60%)",
+    "es": "OEE (60%)",
+    "pt": "OEE (60%)",
+    "bg": "OEE (60%)",
+    "sq": "OEE (60%)"
+  },
+  "Edit profile": {
+    "en": "Edit profile",
+    "el": "Επεξεργασία προφίλ",
+    "fr": "Modifier le profil",
+    "it": "Modifica profilo",
+    "es": "Editar perfil",
+    "pt": "Editar perfil",
+    "bg": "Редактиране на профил",
+    "sq": "Redakto profilin"
+  },
+  "2h 51m": {
+    "en": "2h 51m",
+    "el": "2ώ 51λ",
+    "fr": "2h 51m",
+    "it": "2h 51m",
+    "es": "2h 51m",
+    "pt": "2h 51m",
+    "bg": "2ч 51м",
+    "sq": "2orë 51min"
+  },
+  "Downtime": {
+    "en": "Downtime",
+    "el": "Διακοπή λειτουργίας",
+    "fr": "Temps d'arrêt",
+    "it": "Tempo di inattività",
+    "es": "Tiempo de inactividad",
+    "pt": "Tempo de inatividade",
+    "bg": "Време на неработоспособност",
+    "sq": "Koha e papunësisë"
+  },
+  "Planned time": {
+    "en": "Planned time",
+    "el": "Προγραμματισμένος χρόνος",
+    "fr": "Temps prévu",
+    "it": "Tempo pianificato",
+    "es": "Tiempo planificado",
+    "pt": "Tempo planejado",
+    "bg": "Планирано време",
+    "sq": "Koha e planifikuar"
+  },
+  "Group C": {
+    "en": "Group C",
+    "el": "Ομάδα C",
+    "fr": "Groupe C",
+    "it": "Gruppo C",
+    "es": "Grupo C",
+    "pt": "Grupo C",
+    "bg": "Група C",
+    "sq": "Grupi C"
+  },
+  "Machine locations": {
+    "en": "Machine locations",
+    "el": "Θέσεις μηχανών",
+    "fr": "Emplacements des machines",
+    "it": "Posizioni delle macchine",
+    "es": "Ubicaciones de máquinas",
+    "pt": "Localizações das máquinas",
+    "bg": "Местоположения на машините",
+    "sq": "Vendet e makinave"
+  },
+  "Please enter target: OEE % (optional)": {
+    "en": "Please enter target: OEE % (optional)",
+    "el": "Παρακαλώ εισάγετε στόχο: OEE % (προαιρετικό)",
+    "fr": "Veuillez entrer l'objectif : OEE % (optionnel)",
+    "it": "Si prega di inserire l'obiettivo: OEE % (opzionale)",
+    "es": "Por favor, ingrese el objetivo: OEE % (opcional)",
+    "pt": "Por favor, insira a meta: OEE % (opcional)",
+    "bg": "Моля, въведете цел: OEE % (по избор)",
+    "sq": "Ju lutem, shkruani objektivin: OEE % (opsional)"
+  },
+  "This week": {
+    "en": "This week",
+    "el": "Αυτή την εβδομάδα",
+    "fr": "Cette semaine",
+    "it": "Questa settimana",
+    "es": "Esta semana",
+    "pt": "Esta semana",
+    "bg": "Тази седмица",
+    "sq": "Kjo javë"
+  },
+  "Apply": {
+    "en": "Apply",
+    "el": "Εφαρμογή",
+    "fr": "Appliquer",
+    "it": "Applica",
+    "es": "Aplicar",
+    "pt": "Aplicar",
+    "bg": "Приложи",
+    "sq": "Apliko"
+  },
+  "Security profile": {
+    "en": "Security profile",
+    "el": "Προφίλ ασφαλείας",
+    "fr": "Profil de sécurité",
+    "it": "Profilo di sicurezza",
+    "es": "Perfil de seguridad",
+    "pt": "Perfil de segurança",
+    "bg": "Профил на сигурността",
+    "sq": "Profili i sigurisë"
+  },
+  "13h 30m 32s": {
+    "en": "13h 30m 32s",
+    "el": "13ώ 30λ 32δ",
+    "fr": "13h 30m 32s",
+    "it": "13h 30m 32s",
+    "es": "13h 30m 32s",
+    "pt": "13h 30m 32s",
+    "bg": "13ч 30м 32с",
+    "sq": "13or 30min 32sek"
+  },
+  "05m 00s": {
+    "en": "05m 00s",
+    "el": "05λ 00δ",
+    "fr": "05m 00s",
+    "it": "05m 00s",
+    "es": "05m 00s",
+    "pt": "05m 00s",
+    "bg": "05м 00с",
+    "sq": "05min 00sek"
+  },
+  "33h 11m 03s": {
+    "en": "33h 11m 03s",
+    "el": "33ώ 11λ 03δ",
+    "fr": "33h 11m 03s",
+    "it": "33h 11m 03s",
+    "es": "33h 11m 03s",
+    "pt": "33h 11m 03s",
+    "bg": "33ч 11м 03с",
+    "sq": "33or 11min 03sek"
+  },
+  "4h 12m": {
+    "en": "4h 12m",
+    "el": "4ώ 12λ",
+    "fr": "4h 12m",
+    "it": "4h 12m",
+    "es": "4h 12m",
+    "pt": "4h 12m",
+    "bg": "4ч 12м",
+    "sq": "4or 12min"
+  },
+  "Stop reasons": {
+    "en": "Stop reasons",
+    "el": "Λόγοι διακοπής",
+    "fr": "Raisons d'arrêt",
+    "it": "Motivi di fermo",
+    "es": "Razones de parada",
+    "pt": "Razões para parar",
+    "bg": "Причини за спиране",
+    "sq": "Arsyet e ndalimit"
+  },
+  "Last 30 days": {
+    "en": "Last 30 days",
+    "el": "Последните 30 дни",
+    "fr": "Derniers 30 jours",
+    "it": "Ultimi 30 giorni",
+    "es": "Últimos 30 días",
+    "pt": "Últimos 30 dias",
+    "bg": "Последните 30 дни",
+    "sq": "30 ditët e fundit"
+  },
+  "Products": {
+    "en": "Products",
+    "el": "Προϊόντα",
+    "fr": "Produits",
+    "it": "Prodotti",
+    "es": "Productos",
+    "pt": "Produtos",
+    "bg": "Продукти",
+    "sq": "Produkte"
+  },
+  "Number of decimals": {
+    "en": "Number of decimals",
+    "el": "Αριθμός δεκαδικών",
+    "fr": "Nombre de décimales",
+    "it": "Numero di decimali",
+    "es": "Número de decimales",
+    "pt": "Número de casas decimais",
+    "bg": "Брой десетични знаци",
+    "sq": "Numri i decimalëve"
+  },
+  "Preferences": {
+    "en": "Preferences",
+    "el": "Προτιμήσεις",
+    "fr": "Préférences",
+    "it": "Preferenze",
+    "es": "Preferencias",
+    "pt": "Preferências",
+    "bg": "Предпочитания",
+    "sq": "Preferencat"
+  },
+  "Organisational": {
+    "en": "Organisational",
+    "el": "Οργανωτικό",
+    "fr": "Organisationnel",
+    "it": "Organizzativo",
+    "es": "Organizacional",
+    "pt": "Organizacional",
+    "bg": "Организационен",
+    "sq": "Organizativ"
+  },
+  "Batch process": {
+    "en": "Batch process",
+    "el": "Διαδικασία παρτίδας",
+    "fr": "Processus par lot",
+    "it": "Processo batch",
+    "es": "Proceso por lotes",
+    "pt": "Processo em lote",
+    "bg": "Процес на партиди",
+    "sq": "Procesi i grupeve"
+  },
+  "Last 4 quarters": {
+    "en": "Last 4 quarters",
+    "el": "Τελευταία 4 τρίμηνα",
+    "fr": "Derniers 4 trimestres",
+    "it": "Ultimi 4 trimestri",
+    "es": "Últimos 4 trimestres",
+    "pt": "Últimos 4 trimestres",
+    "bg": "Последните 4 тримесечия",
+    "sq": "4 tremujorët e fundit"
+  },
+  "49m": {
+    "en": "49m",
+    "el": "49λ",
+    "fr": "49m",
+    "it": "49m",
+    "es": "49m",
+    "pt": "49m",
+    "bg": "49м",
+    "sq": "49min"
+  },
+  "X-axis: Stop reasons": {
+    "en": "X-axis: Stop reasons",
+    "el": "Άξονας Χ: Λόγοι διακοπής",
+    "fr": "Axe X : Raisons d'arrêt",
+    "it": "Asse X: Motivi di fermo",
+    "es": "Eje X: Razones de parada",
+    "pt": "Eixo X: Motivos de parada",
+    "bg": "Оста X: Причини за спиране",
+    "sq": "Eksi X: Arsyet e ndalimit"
+  },
+  "1st": {
+    "en": "1st",
+    "el": "1ος",
+    "fr": "1er",
+    "it": "1°",
+    "es": "1°",
+    "pt": "1°",
+    "bg": "1-ви",
+    "sq": "1"
+  },
+  "Last month": {
+    "en": "Last month",
+    "el": "Προηγούμενος μήνας",
+    "fr": "Dernier mois",
+    "it": "Mese scorso",
+    "es": "Último mes",
+    "pt": "Último mês",
+    "bg": "Миналия месец",
+    "sq": "Muaji i kaluar"
+  },
+  "March 2026": {
+    "en": "March 2026",
+    "el": "Μάρτιος 2026",
+    "fr": "Mars 2026",
+    "it": "Marzo 2026",
+    "es": "Marzo 2026",
+    "pt": "Março de 2026",
+    "bg": "Март 2026",
+    "sq": "Mars 2026"
+  },
+  "Terms and definitions": {
+    "en": "Terms and definitions",
+    "el": "Όροι και ορισμοί",
+    "fr": "Termes et définitions",
+    "it": "Termini e definizioni",
+    "es": "Términos y definiciones",
+    "pt": "Termos e definições",
+    "bg": "Термини и определения",
+    "sq": "Terma dhe definita"
+  },
+  "Role": {
+    "en": "Role",
+    "el": "Ρόλος",
+    "fr": "Rôle",
+    "it": "Ruolo",
+    "es": "Rol",
+    "pt": "Papel",
+    "bg": "Роля",
+    "sq": "Roli"
+  },
+  "Rows per page": {
+    "en": "Rows per page",
+    "el": "Γραμμές ανά σελίδα",
+    "fr": "Lignes par page",
+    "it": "Righe per pagina",
+    "es": "Filas por página",
+    "pt": "Linhas por página",
+    "bg": "Редове на страница",
+    "sq": "Rreshta për faqe"
+  },
+  "This month": {
+    "en": "This month",
+    "el": "Αυτός ο μήνας",
+    "fr": "Ce mois",
+    "it": "Questo mese",
+    "es": "Este mes",
+    "pt": "Este mês",
+    "bg": "Този месец",
+    "sq": "Ky muaj"
+  },
+  "3h 37m": {
+    "en": "3h 37m",
+    "el": "3ώ 37λ",
+    "fr": "3h 37m",
+    "it": "3h 37m",
+    "es": "3h 37m",
+    "pt": "3h 37m",
+    "bg": "3ч 37м",
+    "sq": "3or 37min"
+  },
+  "15h 18m 25s": {
+    "en": "15h 18m 25s",
+    "el": "15ώ 18λ 25δ",
+    "fr": "15h 18m 25s",
+    "it": "15h 18m 25s",
+    "es": "15h 18m 25s",
+    "pt": "15h 18m 25s",
+    "bg": "15ч 18м 25с",
+    "sq": "15or 18min 25sek"
+  },
+  "This quarter": {
+    "en": "This quarter",
+    "el": "Αυτό το τρίμηνο",
+    "fr": "Ce trimestre",
+    "it": "Questo trimestre",
+    "es": "Este trimestre",
+    "pt": "Este trimestre",
+    "bg": "Тази четвърт",
+    "sq": "Ky tremujor"
+  },
+  "Choose display preferences in Evocon": {
+    "en": "Choose display preferences in Evocon",
+    "el": "Επιλέξτε προτιμήσεις εμφάνισης στο Evocon",
+    "fr": "Choisissez les préférences d'affichage dans Evocon",
+    "it": "Scegli le preferenze di visualizzazione in Evocon",
+    "es": "Elija las preferencias de visualización en Evocon",
+    "pt": "Escolha as preferências de exibição no Evocon",
+    "bg": "Изберете предпочитания за показване в Evocon",
+    "sq": "Zgjidhni preferencat e shfaqjes në Evocon"
+  },
+  "0s": {
+    "en": "0s",
+    "el": "0δ",
+    "fr": "0s",
+    "it": "0s",
+    "es": "0s",
+    "pt": "0s",
+    "bg": "0с",
+    "sq": "0sek"
+  },
+  "15h 27m 07s": {
+    "en": "15h 27m 07s",
+    "el": "15ώ 27λ 07δ",
+    "fr": "15h 27m 07s",
+    "it": "15h 27m 07s",
+    "es": "15h 27m 07s",
+    "pt": "15h 27m 07s",
+    "bg": "15ч 27м 07с",
+    "sq": "15or 27min 07sek"
+  },
+  "Contact support": {
+    "en": "Contact support",
+    "el": "Επικοινωνία με υποστήριξη",
+    "fr": "Contacter le support",
+    "it": "Contattare il supporto",
+    "es": "Contactar soporte",
+    "pt": "Contactar suporte",
+    "bg": "Свържете се с поддръжката",
+    "sq": "Kontaktoni mbështetje"
+  },
+  "Availability": {
+    "en": "Availability",
+    "el": "Διαθεσιμότητα",
+    "fr": "Disponibilité",
+    "it": "Disponibilità",
+    "es": "Disponibilidad",
+    "pt": "Disponibilidade",
+    "bg": "Наличност",
+    "sq": "Disponueshmëria"
+  },
+  "My Dashboard": {
+    "en": "My Dashboard",
+    "el": "Ο Πίνακάς μου",
+    "fr": "Mon tableau de bord",
+    "it": "La mia dashboard",
+    "es": "Mi panel de control",
+    "pt": "Meu painel",
+    "bg": "Моята табло",
+    "sq": "Tabela ime"
+  },
+  "Rotation": {
+    "en": "Rotation",
+    "el": "Περιστροφή",
+    "fr": "Rotation",
+    "it": "Rotazione",
+    "es": "Rotación",
+    "pt": "Rotação",
+    "bg": "Ротация",
+    "sq": "Rrotullimi"
+  },
+  "29m 31s": {
+    "en": "29m 31s",
+    "el": "29λ 31δ",
+    "fr": "29m 31s",
+    "it": "29m 31s",
+    "es": "29m 31s",
+    "pt": "29m 31s",
+    "bg": "29м 31с",
+    "sq": "29min 31sek"
+  },
+  "Total": {
+    "en": "Total",
+    "el": "Σύνολο",
+    "fr": "Total",
+    "it": "Totale",
+    "es": "Total",
+    "pt": "Total",
+    "bg": "Общо",
+    "sq": "Totali"
+  },
+  "Product code": {
+    "en": "Product code",
+    "el": "Κωδικός προϊόντος",
+    "fr": "Code produit",
+    "it": "Codice prodotto",
+    "es": "Código de producto",
+    "pt": "Código do produto",
+    "bg": "Код на продукта",
+    "sq": "Kodi i produktit"
+  },
+  "Custom": {
+    "en": "Custom",
+    "el": "Προσαρμοσμένο",
+    "fr": "Personnalisé",
+    "it": "Personalizzato",
+    "es": "Personalizado",
+    "pt": "Personalizado",
+    "bg": "Персонализиран",
+    "sq": "E personalizuar"
+  },
+  "Add an additional layer of security to your account.": {
+    "en": "Add an additional layer of security to your account.",
+    "el": "Προσθέστε μια επιπλέον στρώση ασφάλειας στον λογαριασμό σας.",
+    "fr": "Ajoutez une couche de sécurité supplémentaire à votre compte.",
+    "it": "Aggiungi un ulteriore livello di sicurezza al tuo account.",
+    "es": "Agrega una capa adicional de seguridad a tu cuenta.",
+    "pt": "Adicione uma camada adicional de segurança à sua conta.",
+    "bg": "Добавете допълнителен слой защита на акаунта си.",
+    "sq": "Shtoni një shtresë shtesë sigurie në llogarinë tuaj."
+  },
+  "Factories:  All": {
+    "en": "Factories:  All",
+    "el": "Εργοστάσια: Όλα",
+    "fr": "Usines : Toutes",
+    "it": "Stabilimenti: Tutti",
+    "es": "Fábricas: Todas",
+    "pt": "Fábricas: Todas",
+    "bg": "Фабрики: Всички",
+    "sq": "Fabrikat: Të gjitha"
+  },
+  "Technical": {
+    "en": "Technical",
+    "el": "Τεχνικό",
+    "fr": "Technique",
+    "it": "Tecnico",
+    "es": "Técnico",
+    "pt": "Técnico",
+    "bg": "Технически",
+    "sq": "Teknik"
+  },
+  "10m 54s": {
+    "en": "10m 54s",
+    "el": "10μ 54δ",
+    "fr": "10m 54s",
+    "it": "10m 54s",
+    "es": "10m 54s",
+    "pt": "10m 54s",
+    "bg": "10м 54с",
+    "sq": "10m 54s"
+  },
+  "Live": {
+    "en": "Live",
+    "el": "Ζωντανά",
+    "fr": "En direct",
+    "it": "Dal vivo",
+    "es": "En vivo",
+    "pt": "Ao vivo",
+    "bg": "На живо",
+    "sq": "Në kohë reale"
+  },
+  "Manage reasons that operators use to comment quality loss.": {
+    "en": "Manage reasons that operators use to comment quality loss.",
+    "el": "Διαχειριστείτε τους λόγους που χρησιμοποιούν οι χειριστές για να σχολιάσουν την απώλεια ποιότητας.",
+    "fr": "Gérez les raisons que les opérateurs utilisent pour commenter la perte de qualité.",
+    "it": "Gestisci i motivi che gli operatori usano per commentare la perdita di qualità.",
+    "es": "Gestiona las razones que los operadores utilizan para comentar la pérdida de calidad.",
+    "pt": "Gerencie os motivos que os operadores usam para comentar a perda de qualidade.",
+    "bg": "Управлявайте причините, които операторите използват, за да коментират загубата на качество.",
+    "sq": "Menaxhoni arsyet që operatorët përdorin për të komentuar humbjen e cilësisë."
+  },
+  "Check weigher, Unknown": {
+    "en": "Check weigher, Unknown",
+    "el": "Ζυγιστής ελέγχου, Άγνωστο",
+    "fr": "Balance de contrôle, Inconnu",
+    "it": "Bilancia di controllo, Sconosciuto",
+    "es": "Balanza de control, Desconocido",
+    "pt": "Balança de verificação, Desconhecido",
+    "bg": "Контролна везна, Неизвестно",
+    "sq": "Peshore kontrolli, E panjohur"
+  },
+  "Please check back later or edit settings": {
+    "en": "Please check back later or edit settings",
+    "el": "Παρακαλώ ελέγξτε ξανά αργότερα ή επεξεργαστείτε τις ρυθμίσεις",
+    "fr": "Veuillez revenir plus tard ou modifier les paramètres",
+    "it": "Si prega di controllare più tardi o modificare le impostazioni",
+    "es": "Por favor, vuelva más tarde o edite la configuración",
+    "pt": "Por favor, verifique mais tarde ou edite as configurações",
+    "bg": "Моля, проверете отново по-късно или редактирайте настройките",
+    "sq": "Ju lutem kontrolloni më vonë ose redaktoni cilësimet"
+  },
+  "OEE": {
+    "en": "OEE",
+    "el": "OEE",
+    "fr": "OEE",
+    "it": "OEE",
+    "es": "OEE",
+    "pt": "OEE",
+    "bg": "OEE",
+    "sq": "OEE"
+  },
+  "Y-axis: Duration": {
+    "en": "Y-axis: Duration",
+    "el": "Άξονας Y: Διάρκεια",
+    "fr": "Axe Y : Durée",
+    "it": "Asse Y: Durata",
+    "es": "Eje Y: Duración",
+    "pt": "Eixo Y: Duração",
+    "bg": "Y-ос: Продължителност",
+    "sq": "Ekuacioni Y: Kohëzgjatja"
+  },
+  "Checklists": {
+    "en": "Checklists",
+    "el": "Λίστες ελέγχου",
+    "fr": "Listes de contrôle",
+    "it": "Liste di controllo",
+    "es": "Listas de verificación",
+    "pt": "Listas de verificação",
+    "bg": "Списъци за проверка",
+    "sq": "Listat e kontrollit"
+  },
+  "1h 57m": {
+    "en": "1h 57m",
+    "el": "1ώ 57λ",
+    "fr": "1h 57m",
+    "it": "1h 57m",
+    "es": "1h 57m",
+    "pt": "1h 57m",
+    "bg": "1ч 57м",
+    "sq": "1h 57m"
+  },
+  "Status:  All": {
+    "en": "Status:  All",
+    "el": "Κατάσταση: Όλα",
+    "fr": "Statut : Tous",
+    "it": "Stato: Tutti",
+    "es": "Estado: Todos",
+    "pt": "Status: Todos",
+    "bg": "Статус: Всички",
+    "sq": "Statusi: Të gjitha"
+  },
+  "3h 33m": {
+    "en": "3h 33m",
+    "el": "3ώ 33λ",
+    "fr": "3h 33m",
+    "it": "3h 33m",
+    "es": "3h 33m",
+    "pt": "3h 33m",
+    "bg": "3ч 33м",
+    "sq": "3h 33m"
+  },
+  "Product name": {
+    "en": "Product name",
+    "el": "Όνομα προϊόντος",
+    "fr": "Nom du produit",
+    "it": "Nome del prodotto",
+    "es": "Nombre del producto",
+    "pt": "Nome do produto",
+    "bg": "Име на продукта",
+    "sq": "Emri i produktit"
+  },
+  "Group A": {
+    "en": "Group A",
+    "el": "Ομάδα Α",
+    "fr": "Groupe A",
+    "it": "Gruppo A",
+    "es": "Grupo A",
+    "pt": "Grupo A",
+    "bg": "Група А",
+    "sq": "Grupi A"
+  },
+  "Machine Reset": {
+    "en": "Machine Reset",
+    "el": "Επαναφορά μηχανής",
+    "fr": "Réinitialisation de la machine",
+    "it": "Ripristino macchina",
+    "es": "Reinicio de la máquina",
+    "pt": "Reinicialização da máquina",
+    "bg": "Нулиране на машината",
+    "sq": "Rivendosja e makinës"
+  },
+  "5h 3m": {
+    "en": "5h 3m",
+    "el": "5ώ 3λ",
+    "fr": "5h 3m",
+    "it": "5h 3m",
+    "es": "5h 3m",
+    "pt": "5h 3m",
+    "bg": "5ч 3м",
+    "sq": "5h 3m"
+  },
+  "Default start page": {
+    "en": "Default start page",
+    "el": "Προεπιλεγμένη σελίδα εκκίνησης",
+    "fr": "Page de démarrage par défaut",
+    "it": "Pagina di avvio predefinita",
+    "es": "Página de inicio predeterminada",
+    "pt": "Página inicial padrão",
+    "bg": "Страница за стартиране по подразбиране",
+    "sq": "Faqja e fillimit e paracaktuar"
+  },
+  "68562651, Test 50010": {
+    "en": "68562651, Test 50010",
+    "el": "68562651, Δοκιμή 50010",
+    "fr": "68562651, Test 50010",
+    "it": "68562651, Test 50010",
+    "es": "68562651, Prueba 50010",
+    "pt": "68562651, Teste 50010",
+    "bg": "68562651, Тест 50010",
+    "sq": "68562651, Test 50010"
+  },
+  "2h 56m": {
+    "en": "2h 56m",
+    "el": "2ώ 56λ",
+    "fr": "2h 56m",
+    "it": "2h 56m",
+    "es": "2h 56m",
+    "pt": "2h 56m",
+    "bg": "2ч 56м",
+    "sq": "2or 56min"
+  },
+  "Cancel": {
+    "en": "Cancel",
+    "el": "Ακύρωση",
+    "fr": "Annuler",
+    "it": "Annulla",
+    "es": "Cancelar",
+    "pt": "Cancelar",
+    "bg": "Отказ",
+    "sq": "Anulo"
+  },
+  "13h 14m 53s": {
+    "en": "13h 14m 53s",
+    "el": "13ώ 14λ 53δ",
+    "fr": "13h 14m 53s",
+    "it": "13h 14m 53s",
+    "es": "13h 14m 53s",
+    "pt": "13h 14m 53s",
+    "bg": "13ч 14м 53с",
+    "sq": "13or 14min 53sek"
+  },
+  "sec/min": {
+    "en": "sec/min",
+    "el": "sec/min",
+    "fr": "sec/min",
+    "it": "sec/min",
+    "es": "sec/min",
+    "pt": "sec/min",
+    "bg": "sec/min",
+    "sq": "sec/min"
+  },
+  "Changeover": {
+    "en": "Changeover",
+    "el": "Αλλαγή",
+    "fr": "Changement",
+    "it": "Cambio",
+    "es": "Cambio",
+    "pt": "Mudança",
+    "bg": "Смяна",
+    "sq": "Ndërrim"
+  },
+  "Current batch": {
+    "en": "Current batch",
+    "el": "Τρέχουσα παρτίδα",
+    "fr": "Lot actuel",
+    "it": "Lotto attuale",
+    "es": "Lote actual",
+    "pt": "Lote atual",
+    "bg": "Текуща партида",
+    "sq": "Grupi aktual"
+  },
+  "Hide changeover button from footer": {
+    "en": "Hide changeover button from footer",
+    "el": "Απόκρυψη κουμπιού αλλαγής από το υποσέλιδο",
+    "fr": "Masquer le bouton de changement dans le pied de page",
+    "it": "Nascondi il pulsante di cambio dal piè di pagina",
+    "es": "Ocultar botón de cambio del pie de página",
+    "pt": "Ocultar botão de troca do rodapé",
+    "bg": "Скрий бутона за смяна от долния колонтитул",
+    "sq": "Fshih butonin e kalimit nga fundi i faqes"
+  },
+  "Good quantity": {
+    "en": "Good quantity",
+    "el": "Καλή ποσότητα",
+    "fr": "Bonne quantité",
+    "it": "Buona quantità",
+    "es": "Buena cantidad",
+    "pt": "Boa quantidade",
+    "bg": "Добро количество",
+    "sq": "Sasia e mirë"
+  }
+}

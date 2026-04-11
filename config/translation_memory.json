@@ -1,0 +1,659 @@
+{
+  "OEE": {
+    "fr": "TRS",
+    "it": "OEE",
+    "pt": "OEE",
+    "el": "OEE",
+    "bg": "OEE",
+    "sq": "OEE",
+    "es": "OEE"
+  },
+  "availability": {
+    "fr": "disponibilité",
+    "it": "disponibilità",
+    "pt": "disponibilidade",
+    "el": "διαθεσιμότητα",
+    "bg": "разполагаемост",
+    "sq": "disponueshmëria",
+    "es": "disponibilidad"
+  },
+  "performance": {
+    "fr": "rendement",
+    "it": "prestazione",
+    "pt": "desempenho",
+    "el": "Απόδοση",
+    "bg": "Производителност",
+    "sq": "performanca",
+    "es": "rendimiento"
+  },
+  "quality": {
+    "fr": "qualité",
+    "it": "qualità",
+    "pt": "qualidade",
+    "el": "Ποιότητα",
+    "bg": "Качество",
+    "sq": "cilësia",
+    "es": "calidad"
+  },
+  "cycle time": {
+    "fr": "temps de cycle",
+    "it": "tempo di ciclo",
+    "pt": "tempo de ciclo",
+    "el": "χρόνος κύκλου",
+    "bg": "време на цикъл",
+    "sq": "koha e ciklit",
+    "es": "tiempo de ciclo"
+  },
+  "ideal cycle time": {
+    "fr": "temps de cycle idéal",
+    "it": "tempo di ciclo ideale",
+    "pt": "tempo de ciclo ideal",
+    "el": "ιδανικός χρόνος κύκλου",
+    "bg": "идеално време на цикъл",
+    "sq": "koha ideale e ciklit",
+    "es": "tiempo de ciclo ideal"
+  },
+  "station": {
+    "fr": "station",
+    "it": "stazione di lavoro",
+    "pt": "estação de trabalho",
+    "el": "σταθμός εργασίας",
+    "bg": "работна станция",
+    "sq": "stacion pune",
+    "es": "estación de trabajo"
+  },
+  "factory": {
+    "fr": "usine",
+    "it": "stabilimento",
+    "pt": "fábrica",
+    "el": "εργοστάσιο",
+    "bg": "Фабрика",
+    "sq": "fabrikë",
+    "es": "fábrica"
+  },
+  "product": {
+    "fr": "produit",
+    "it": "prodotto",
+    "pt": "produto",
+    "el": "προϊόν",
+    "bg": "Продукт",
+    "sq": "produkt",
+    "es": "producto"
+  },
+  "operator": {
+    "fr": "opérateur",
+    "it": "operatore",
+    "pt": "operador",
+    "el": "χειριστής",
+    "bg": "оператор",
+    "sq": "operator",
+    "es": "operador"
+  },
+  "shift": {
+    "fr": "équipe",
+    "it": "turno",
+    "pt": "turno",
+    "el": "βάρδια",
+    "bg": "смяна",
+    "sq": "turn",
+    "es": "turno"
+  },
+  "downtime": {
+    "fr": "temps d'arrêt",
+    "it": "tempo di fermo",
+    "pt": "tempo de parada",
+    "el": "χρόνος διακοπής",
+    "bg": "престой",
+    "sq": "kohë e ndalesave",
+    "es": "tiempo de parada"
+  },
+  "stop": {
+    "fr": "arrêt",
+    "it": "fermo",
+    "pt": "parada",
+    "el": "διακοπή",
+    "bg": "Спиране",
+    "sq": "ndalesë",
+    "es": "parada"
+  },
+  "stop reason": {
+    "fr": "raison d'arrêt",
+    "it": "motivo del fermo",
+    "pt": "motivo de parada",
+    "el": "λόγος διακοπής",
+    "bg": "причина за спиране",
+    "sq": "arsyeja e ndalesës",
+    "es": "motivo de parada"
+  },
+  "changeover": {
+    "fr": "changement de série",
+    "it": "cambio formato",
+    "pt": "changeover",
+    "el": "αλλαγή παραγωγής",
+    "bg": "пренастройка",
+    "sq": "ndërrim produkti",
+    "es": "cambio de serie"
+  },
+  "scrap": {
+    "fr": "rebut",
+    "it": "scarto",
+    "pt": "refugo",
+    "el": "απορρίμματα",
+    "bg": "брак",
+    "sq": "skart",
+    "es": "desecho"
+  },
+  "scrap reason": {
+    "fr": "motif de rebut",
+    "it": "motivo di scarto",
+    "pt": "motivo de refugo",
+    "el": "αιτία απορρίμματος",
+    "bg": "причина за брак",
+    "sq": "arsyeja e skartit",
+    "es": "motivo de desecho"
+  },
+  "good quantity": {
+    "fr": "quantité conforme",
+    "it": "quantità conforme",
+    "pt": "quantidade conforme",
+    "el": "καλή ποσότητα",
+    "bg": "годно количество",
+    "sq": "sasia e mirë",
+    "es": "cantidad conforme"
+  },
+  "total quantity": {
+    "fr": "quantité totale",
+    "it": "quantità totale",
+    "pt": "quantidade total",
+    "el": "συνολική ποσότητα",
+    "bg": "общо количество",
+    "sq": "sasia totale",
+    "es": "cantidad total"
+  },
+  "speed loss": {
+    "fr": "perte de vitesse",
+    "it": "perdita di velocità",
+    "pt": "perda de velocidade",
+    "el": "απώλεια ταχύτητας",
+    "bg": "загуба на скорост",
+    "sq": "humbje shpejtësie",
+    "es": "pérdida de velocidad"
+  },
+  "target speed": {
+    "fr": "vitesse cible",
+    "it": "velocità obiettivo",
+    "pt": "velocidade-alvo",
+    "el": "ταχύτητα-στόχος",
+    "bg": "целева скорост",
+    "sq": "shpejtësia e synuar",
+    "es": "velocidad objetivo"
+  },
+  "production speed": {
+    "fr": "vitesse de production",
+    "it": "velocità di produzione",
+    "pt": "velocidade de produção",
+    "el": "ταχύτητα παραγωγής",
+    "bg": "скорост на производство",
+    "sq": "shpejtësia e prodhimit",
+    "es": "velocidad de producción"
+  },
+  "operating time": {
+    "fr": "temps de fonctionnement",
+    "it": "tempo di funzionamento",
+    "pt": "tempo de funcionamento",
+    "el": "χρόνος λειτουργίας",
+    "bg": "време на функциониране",
+    "sq": "koha e funksionimit",
+    "es": "tiempo de funcionamiento"
+  },
+  "planned time": {
+    "fr": "temps requis",
+    "it": "tempo pianificato",
+    "pt": "tempo planejado",
+    "el": "προγραμματισμένος χρόνος",
+    "bg": "планирано време",
+    "sq": "koha e planifikuar",
+    "es": "tiempo planificado"
+  },
+  "setup time": {
+    "fr": "temps de réglage",
+    "it": "tempo di attrezzaggio",
+    "pt": "tempo de preparação",
+    "el": "χρόνος ρύθμισης",
+    "bg": "време за настройка",
+    "sq": "koha e përgatitjes",
+    "es": "tiempo de preparación"
+  },
+  "duration": {
+    "fr": "durée",
+    "it": "durata",
+    "pt": "duração",
+    "el": "διάρκεια",
+    "bg": "продължителност",
+    "sq": "kohëzgjatje",
+    "es": "duración"
+  },
+  "dashboard": {
+    "fr": "tableau de bord",
+    "it": "cruscotto",
+    "pt": "painel",
+    "el": "Πίνακας ελέγχου",
+    "bg": "Табло",
+    "sq": "paneli i kontrollës",
+    "es": "tablero de control"
+  },
+  "Shift View": {
+    "fr": "Vue de poste",
+    "it": "Vista Turno",
+    "pt": "Visão do Turno",
+    "el": "Προβολή Βάρδιας",
+    "bg": "Изглед на смяната",
+    "sq": "Pamja e Ndërrimit",
+    "es": "Vista de turno"
+  },
+  "checklist": {
+    "fr": "liste de contrôle",
+    "it": "lista di controllo",
+    "pt": "lista de verificação",
+    "el": "Λίστα ελέγχου",
+    "bg": "Контролен списък",
+    "sq": "listë kontrolli",
+    "es": "lista de verificación"
+  },
+  "extra shift": {
+    "fr": "équipe supplémentaire",
+    "it": "turno aggiuntivo",
+    "pt": "turno extra",
+    "el": "επιπλέον βάρδια",
+    "bg": "допълнителна смяна",
+    "sq": "turn shtesë",
+    "es": "turno adicional"
+  },
+  "production signal": {
+    "fr": "signal de production",
+    "it": "segnale di produzione",
+    "pt": "sinal de produção",
+    "el": "σήμα παραγωγής",
+    "bg": "производствен сигнал",
+    "sq": "sinjal prodhimi",
+    "es": "señal de producción"
+  },
+  "production signals": {
+    "fr": "signaux de production",
+    "it": "segnali di produzione",
+    "pt": "sinais de produção",
+    "el": "σήματα παραγωγής",
+    "bg": "производствени сигнали",
+    "sq": "sinjale prodhimi",
+    "es": "señales de producción"
+  },
+  "shift template": {
+    "fr": "modèle de poste",
+    "it": "modello di turno",
+    "pt": "modelo de turno",
+    "el": "πρότυπο βάρδιας",
+    "bg": "шаблон за смяна",
+    "sq": "shabllon i ndërrimit",
+    "es": "plantilla de turno"
+  },
+  "shift time": {
+    "fr": "temps de poste",
+    "it": "tempo di turno",
+    "pt": "tempo de turno",
+    "el": "χρόνος βάρδιας",
+    "bg": "време на смяна",
+    "sq": "koha e turnit",
+    "es": "tiempo de turno"
+  },
+  "shift times": {
+    "fr": "horaires de poste",
+    "it": "orari di turno",
+    "pt": "horários de turno",
+    "el": "ώρες βάρδιας",
+    "bg": "часове на смяна",
+    "sq": "oraret e ndërrimit",
+    "es": "horarios de turno"
+  },
+  "speed loss reason": {
+    "fr": "cause de perte de cadence",
+    "it": "motivo di perdita di velocità",
+    "pt": "motivo de perda de velocidade",
+    "el": "αιτία απώλειας ταχύτητας",
+    "bg": "причина за загуба на скорост",
+    "sq": "arsyeja e humbjes së shpejtësisë",
+    "es": "razón de pérdida de velocidad"
+  },
+  "stop reasons": {
+    "fr": "raisons d'arrêt",
+    "it": "motivi di fermo",
+    "pt": "motivos de parada",
+    "el": "αιτίες διακοπής",
+    "bg": "причини за спиране",
+    "sq": "arsyet e ndaljes",
+    "es": "razones de parada"
+  },
+  "technical availability": {
+    "fr": "disponibilité technique",
+    "it": "disponibilità tecnica",
+    "pt": "disponibilidade técnica",
+    "el": "τεχνική διαθεσιμότητα",
+    "bg": "техническа наличност",
+    "sq": "disponueshmëria teknike",
+    "es": "disponibilidad técnica"
+  },
+  "OOE": {
+    "fr": "TRG",
+    "it": "OOE",
+    "pt": "OOE",
+    "el": "OOE",
+    "bg": "OOE",
+    "sq": "EPO",
+    "es": "EGO"
+  },
+  "TEEP": {
+    "fr": "TRE",
+    "it": "TEEP",
+    "pt": "TEEP",
+    "el": "TEEP",
+    "bg": "TEEP",
+    "sq": "TEEP",
+    "es": "TEEP"
+  },
+  "OEE calculation": {
+    "fr": "Calcul du TRS",
+    "it": "Calcolo dell'OEE",
+    "pt": "Cálculo do OEE",
+    "el": "υπολογισμός OEE",
+    "bg": "изчисление на OEE",
+    "sq": "Llogaritja e OEE-së",
+    "es": "Cálculo del OEE"
+  },
+  "loss": {
+    "fr": "perte",
+    "it": "perdita",
+    "pt": "perda",
+    "el": "απώλεια",
+    "bg": "загуба",
+    "sq": "humbje",
+    "es": "pérdida"
+  },
+  "good production": {
+    "fr": "production conforme",
+    "it": "produzione conforme",
+    "pt": "produção conforme",
+    "el": "καλή παραγωγή",
+    "bg": "годна продукция",
+    "sq": "prodhim i mirë",
+    "es": "producción conforme"
+  },
+  "stop type": {
+    "fr": "type d'arrêt",
+    "it": "tipo di fermo",
+    "pt": "tipo de parada",
+    "el": "τύπος διακοπής",
+    "bg": "тип на спиране",
+    "sq": "lloj ndalimi",
+    "es": "tipo de paro"
+  },
+  "unplanned stops": {
+    "fr": "arrêts imprévus",
+    "it": "fermi non pianificati",
+    "pt": "paradas não planejadas",
+    "el": "μη προγραμματισμένες διακοπές",
+    "bg": "непланирани спирания",
+    "sq": "ndalime të paplanifikuara",
+    "es": "paros no planificados"
+  },
+  "planned stops": {
+    "fr": "arrêts planifiés",
+    "it": "fermi pianificati",
+    "pt": "paradas planejadas",
+    "el": "προγραμματισμένες διακοπές",
+    "bg": "планирани спирания",
+    "sq": "ndalime të planifikuara",
+    "es": "paros planificados"
+  },
+  "uncommented": {
+    "fr": "non commenté",
+    "it": "non commentato",
+    "pt": "não comentado",
+    "el": "ασχολίαστος",
+    "bg": "некоментиран",
+    "sq": "pakomentuar",
+    "es": "sin comentar"
+  },
+  "batch": {
+    "fr": "lot",
+    "it": "lotto",
+    "pt": "lote",
+    "el": "παρτίδα",
+    "bg": "партида",
+    "sq": "lot",
+    "es": "lote"
+  },
+  "product code": {
+    "fr": "code produit",
+    "it": "codice prodotto",
+    "pt": "código do produto",
+    "el": "κώδικας προϊόντος",
+    "bg": "код на продукт",
+    "sq": "kod produkti",
+    "es": "código de producto"
+  },
+  "LOT/Batch number": {
+    "fr": "LOT/Numéro de lot",
+    "it": "Numero di lotto (LOT)",
+    "pt": "LOT/Número de lote",
+    "el": "LOT/Αριθμός παρτίδας",
+    "bg": "LOT/Партиен номер",
+    "sq": "LOT/Numër loti",
+    "es": "Número de lote/LOT"
+  },
+  "primary unit": {
+    "fr": "unité principale",
+    "it": "unità primaria",
+    "pt": "unidade principal",
+    "el": "κύρια μονάδα",
+    "bg": "основна единица",
+    "sq": "njësi primare",
+    "es": "unidad principal"
+  },
+  "alternative unit": {
+    "fr": "unité alternative",
+    "it": "unità alternativa",
+    "pt": "unidade alternativa",
+    "el": "εναλλακτική μονάδα",
+    "bg": "алтернативна единица",
+    "sq": "njësi alternative",
+    "es": "unidad alternativa"
+  },
+  "location": {
+    "fr": "emplacement",
+    "it": "ubicazione",
+    "pt": "localização",
+    "el": "τοποθεσία",
+    "bg": "локация",
+    "sq": "lokacion",
+    "es": "ubicación"
+  },
+  "locations": {
+    "fr": "emplacements",
+    "it": "ubicazioni",
+    "pt": "localizações",
+    "el": "τοποθεσίες",
+    "bg": "локации",
+    "sq": "lokacione",
+    "es": "ubicaciones"
+  },
+  "machine location": {
+    "fr": "emplacement de machine",
+    "it": "ubicazione di macchina",
+    "pt": "localização de máquina",
+    "el": "τοποθεσία μηχανής",
+    "bg": "местоположение на машина",
+    "sq": "lokacioni i makinës",
+    "es": "ubicación de máquina"
+  },
+  "machine locations": {
+    "fr": "emplacements machines",
+    "it": "ubicazioni delle macchine",
+    "pt": "localizações de máquinas",
+    "el": "τοποθεσίες μηχανών",
+    "bg": "местоположения на машини",
+    "sq": "vendndodhje makinash",
+    "es": "ubicaciones de máquinas"
+  },
+  "stations": {
+    "fr": "stations de travail",
+    "it": "stazioni di lavoro",
+    "pt": "estações de trabalho",
+    "el": "σταθμοί εργασίας",
+    "bg": "работни станции",
+    "sq": "stacione prodhimi",
+    "es": "estaciones de trabajo"
+  },
+  "station groups": {
+    "fr": "groupes de stations",
+    "it": "gruppi di stazioni",
+    "pt": "grupos de estações de trabalho",
+    "el": "ομάδες σταθμών εργασίας",
+    "bg": "групи работни станции",
+    "sq": "grupe stacionesh prodhimi",
+    "es": "grupos de estaciones"
+  },
+  "checklists": {
+    "fr": "listes de contrôle",
+    "it": "liste di controllo",
+    "pt": "listas de verificação",
+    "el": "Λίστες ελέγχου",
+    "bg": "Контролни списъци",
+    "sq": "listat e kontrollit",
+    "es": "listas de verificación"
+  },
+  "checklist groups": {
+    "fr": "groupes de listes de contrôle",
+    "it": "gruppi di liste di controllo",
+    "pt": "grupos de listas de verificação",
+    "el": "ομάδες λιστών ελέγχου",
+    "bg": "Групи от контролни списъци",
+    "sq": "grupe të listave të kontrollit",
+    "es": "grupos de listas de verificación"
+  },
+  "Factory Overview": {
+    "fr": "Vue d'ensemble de l'usine",
+    "it": "Panoramica dello Stabilimento",
+    "pt": "Visão Geral da Fábrica",
+    "el": "Επισκόπηση Εργοστασίου",
+    "bg": "Преглед на завода",
+    "sq": "Pasqyra e Fabrikës",
+    "es": "Vista general de la fábrica"
+  },
+  "Grid View": {
+    "fr": "Vue en grille",
+    "it": "Vista a griglia",
+    "pt": "Visão em Grade",
+    "el": "Προβολή Πλέγματος",
+    "bg": "Мрежов изглед",
+    "sq": "Pamja e Rrjetit",
+    "es": "Vista de cuadrícula"
+  },
+  "extra note": {
+    "fr": "note supplémentaire",
+    "it": "nota aggiuntiva",
+    "pt": "nota adicional",
+    "el": "επιπρόσθετη σημείωση",
+    "bg": "допълнителна бележка",
+    "sq": "shënim shtesë",
+    "es": "nota adicional"
+  },
+  "downtime auto-commenting": {
+    "fr": "commentaire automatique des temps d'arrêt",
+    "it": "commento automatico dei fermi",
+    "pt": "comentário automático de paradas",
+    "el": "αυτόματη σχολίαση διακοπών",
+    "bg": "автоматично коментиране на простои",
+    "sq": "komentimi automatik i kohëve të ndaljes",
+    "es": "comentario automático de tiempos de paro"
+  },
+  "No shift days": {
+    "fr": "Jours sans postes",
+    "it": "Giorni senza turni",
+    "pt": "Dias sem turnos",
+    "el": "Ημέρες χωρίς βάρδιες",
+    "bg": "Дни без смени",
+    "sq": "Ditë pa ndërrime",
+    "es": "Días sin turnos"
+  },
+  "empty shift": {
+    "fr": "poste vide",
+    "it": "turno vuoto",
+    "pt": "turno vazio",
+    "el": "κενή βάρδια",
+    "bg": "празна смяна",
+    "sq": "ndërrim bosh",
+    "es": "turno vacío"
+  },
+  "empty shift reason": {
+    "fr": "raison de poste vide",
+    "it": "motivo di turno vuoto",
+    "pt": "motivo de turno vazio",
+    "el": "αιτία κενής βάρδιας",
+    "bg": "причина за празна смяна",
+    "sq": "arsye e ndërrimit bosh",
+    "es": "razón de turno vacío"
+  },
+  "speed loss reasons": {
+    "fr": "causes de perte de cadence",
+    "it": "cause di perdita di velocità",
+    "pt": "causas de perda de velocidade",
+    "el": "αιτίες απώλειας ταχύτητας",
+    "bg": "причини за загуба на скорост",
+    "sq": "shkaqet e humbjes së shpejtësisë",
+    "es": "causas de pérdida de velocidad"
+  },
+  "speed loss groups": {
+    "fr": "groupes de perte de cadence",
+    "it": "gruppi di perdita di velocità",
+    "pt": "grupos de perda de velocidade",
+    "el": "ομάδες απώλειας ταχύτητας",
+    "bg": "групи на загуба на скорост",
+    "sq": "grupet e humbjes së shpejtësisë",
+    "es": "grupos de pérdida de velocidad"
+  },
+  "default scrap reason": {
+    "fr": "motif de rebut par défaut",
+    "it": "motivo di scarto predefinito",
+    "pt": "motivo de refugo padrão",
+    "el": "προεπιλεγμένη αιτία απορρίμματος",
+    "bg": "причина за брак по подразбиране",
+    "sq": "arsyeja standarde e skartit",
+    "es": "motivo de desecho por defecto"
+  },
+  "product changeover reason": {
+    "fr": "raison du changement de série",
+    "it": "motivo del cambio prodotto",
+    "pt": "motivo da troca de produto",
+    "el": "αιτία αλλαγής προϊόντος",
+    "bg": "причина за смяна на продукт",
+    "sq": "arsyeja e ndërrimit të produktit",
+    "es": "razón de cambio de producto"
+  },
+  "company administrator": {
+    "fr": "administrateur d'entreprise",
+    "it": "amministratore aziendale",
+    "pt": "administrador de empresa",
+    "el": "διαχειριστής εταιρείας",
+    "bg": "администратор на компанията",
+    "sq": "administratori i kompanisë",
+    "es": "administrador de empresa"
+  },
+  "factory administrator": {
+    "fr": "administrateur d'usine",
+    "it": "amministratore di stabilimento",
+    "pt": "administrador de fábrica",
+    "el": "διαχειριστής εργοστασίου",
+    "bg": "администратор на фабриката",
+    "sq": "administratori i fabrikës",
+    "es": "administrador de fábrica"
+  }
+}
