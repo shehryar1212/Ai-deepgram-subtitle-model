@@ -139,8 +139,9 @@ def main():
         current_loopback=None,
         input_languages=input_languages,
     )
-    mic_device, loopback_device, input_lang = selector.show()  # raises SystemExit if user exits
+    mic_device, loopback_device, input_lang, loopback_lang = selector.show()  # raises SystemExit if user exits
     print(f"[INFO] Transcription language: {input_languages.get(input_lang, input_lang)}", flush=True)
+    print(f"[INFO] Loopback language: {input_languages.get(loopback_lang, loopback_lang)}", flush=True)
 
     # ── Launch overlay — starts with default language pre-selected ───────
     default_lang = overlay_cfg.get("default_language", next(iter(languages), "fr"))
@@ -160,8 +161,9 @@ def main():
     audience_cfg = cfg.get("audience", {})
     audience_pipeline: AudiencePipeline | None = None
     if audience_cfg.get("enabled", False) and loopback_device is not None:
-        audience_lang_code = audience_cfg.get("language_code", "en")
-        audience_lang_name = audience_cfg.get("language_name", "English")
+        # Use language selected in device selector UI (not hardcoded config)
+        audience_lang_code = loopback_lang
+        audience_lang_name = input_languages.get(loopback_lang, loopback_lang)
         audience_pipeline = AudiencePipeline(
             overlay=subtitle_bar,
             audience_lang_code=audience_lang_code,

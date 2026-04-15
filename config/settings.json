@@ -46,9 +46,11 @@
   },
   "audience": {
     "enabled": true,
-    "language_code": "fr",
-    "language_name": "French",
-    "min_words": 2
+    "language_code": "en",
+    "language_name": "English",
+    "min_words": 2,
+    "loopback_gain": 2.0,
+    "_loopback_gain_note": "Amplify loopback audio before sending to Deepgram. Raise if levels are low (0.05–0.1 range)."
   },
   "output": {
     "subtitle_file": "subtitle.txt",

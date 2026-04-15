@@ -29,6 +29,7 @@ class AudiencePipeline:
         self._lang_code = audience_lang_code
         self._lang_name = audience_lang_name
         self._min_words: int = audience_cfg.get("min_words", 5)
+        self._loopback_gain: float = audience_cfg.get("loopback_gain", 2.0)
         self._loopback_device = loopback_device
         self._audio_queue: queue.Queue = queue.Queue()
         self._transcript_queue: queue.Queue = queue.Queue()
@@ -77,6 +78,7 @@ class AudiencePipeline:
                     while not self._audio_queue.empty():
                         extra.append(self._audio_queue.get_nowait())
                     combined = np.concatenate(extra, axis=0)
+                    combined = np.clip(combined * self._loopback_gain, -1.0, 1.0)
                     self._transcriber.send_audio(combined)
                 except queue.Empty:
                     pass

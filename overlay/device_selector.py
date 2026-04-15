@@ -46,7 +46,7 @@ def _apply_dark_style(root: tk.Tk) -> None:
 
 class DeviceSelector:
     """
-    Modal startup dialog — returns (mic_device_idx, loopback_device_idx, input_lang_code).
+    Modal startup dialog — returns (mic_device_idx, loopback_device_idx, input_lang_code, loopback_lang_code).
     loopback_device_idx is None if the user disables loopback.
     Raises SystemExit if the user closes the window or clicks Exit.
     """
@@ -65,6 +65,7 @@ class DeviceSelector:
         # Input language options: code → name  (English is always available)
         self._input_languages: dict[str, str] = input_languages or {"en": "English"}
         self._input_lang: str = "en"  # default: English
+        self._loopback_lang: str = "en"  # default: English
 
         # Level monitor state
         self._level_stream: sd.InputStream | None = None
@@ -81,12 +82,13 @@ class DeviceSelector:
         self._mic_var: tk.StringVar | None = None
         self._lb_var: tk.StringVar | None = None
         self._lang_var: tk.StringVar | None = None
+        self._lb_lang_var: tk.StringVar | None = None
 
     # ── Public ──────────────────────────────────────────────────────────
 
-    def show(self) -> tuple[int | None, int | None, str]:
+    def show(self) -> tuple[int | None, int | None, str, str]:
         """Block until the user clicks Start or closes window.
-        Returns (mic_idx, loopback_idx, input_lang_code).
+        Returns (mic_idx, loopback_idx, input_lang_code, loopback_lang_code).
         """
         self._root = tk.Tk()
         self._root.title("Live Subtitles — Audio Setup")
@@ -109,7 +111,7 @@ class DeviceSelector:
         if self._cancelled:
             raise SystemExit(0)
 
-        return self._mic_idx, self._loopback_idx, self._input_lang
+        return self._mic_idx, self._loopback_idx, self._input_lang, self._loopback_lang
 
     # ── Device discovery ─────────────────────────────────────────────────
 
@@ -223,11 +225,11 @@ class DeviceSelector:
 
         # ── Loopback section ──
         lb_frame = tk.Frame(root, bg="#222222", padx=14, pady=10)
-        lb_frame.pack(fill="x", padx=20, pady=(0, 14))
+        lb_frame.pack(fill="x", padx=20, pady=(0, 8))
 
         tk.Label(
             lb_frame,
-            text="System audio loopback  (audience voice → left panel English)",
+            text="System audio loopback  (incoming voice → left panel translation)",
             fg="#aaaaaa",
             bg="#222222",
             font=("Arial", 9, "bold"),
@@ -267,6 +269,35 @@ class DeviceSelector:
                 bg="#222222",
                 font=("Arial", 8),
             ).pack(anchor="w", pady=(2, 0))
+
+        # ── Loopback language section ──
+        lb_lang_frame = tk.Frame(root, bg="#222222", padx=14, pady=10)
+        lb_lang_frame.pack(fill="x", padx=20, pady=(0, 14))
+
+        tk.Label(
+            lb_lang_frame,
+            text="Incoming voice language  (language spoken through the loopback)",
+            fg="#aaaaaa",
+            bg="#222222",
+            font=("Arial", 9, "bold"),
+            anchor="w",
+        ).pack(fill="x")
+
+        lb_lang_opts = [f"{name}  [{code}]" for code, name in self._input_languages.items()]
+        self._lb_lang_var = tk.StringVar()
+        lb_lang_combo = ttk.Combobox(
+            lb_lang_frame,
+            textvariable=self._lb_lang_var,
+            values=lb_lang_opts,
+            state="readonly",
+            width=56,
+            style="Dark.TCombobox",
+        )
+        lb_lang_combo.pack(fill="x", pady=(4, 2))
+        lb_lang_combo.bind("<<ComboboxSelected>>", self._on_lb_lang_changed)
+
+        # Pre-select English by default
+        self._preselect_loopback_lang(lb_lang_combo)
 
         # ── Buttons ──
         btn_frame = tk.Frame(root, bg="#1a1a1a")
@@ -329,6 +360,16 @@ class DeviceSelector:
             combo.current(0)
             self._input_lang = codes[0]
 
+    def _preselect_loopback_lang(self, combo: ttk.Combobox) -> None:
+        """Pre-select English as the default loopback language."""
+        codes = list(self._input_languages.keys())
+        if "en" in codes:
+            combo.current(codes.index("en"))
+            self._loopback_lang = "en"
+        elif codes:
+            combo.current(0)
+            self._loopback_lang = codes[0]
+
     # ── Event handlers ───────────────────────────────────────────────────
 
     def _on_mic_changed(self, _event=None) -> None:
@@ -348,6 +389,13 @@ class DeviceSelector:
         try:
             self._loopback_idx = int(sel.split("]")[0].lstrip("["))
         except (ValueError, IndexError):
+            pass
+
+    def _on_lb_lang_changed(self, _event=None) -> None:
+        sel = self._lb_lang_var.get()
+        try:
+            self._loopback_lang = sel.split("[")[1].rstrip("]").strip()
+        except (IndexError, AttributeError):
             pass
 
     def _on_lang_changed(self, _event=None) -> None:
