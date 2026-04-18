@@ -19,6 +19,15 @@ import sounddevice as sd
 
 _LOOPBACK_KEYWORDS = ("stereo mix", "loopback", "what u hear", "wave out mix", "cable output", "vb-audio", "virtual cable")
 
+_ACCENT  = "#1a6bc0"
+_BG_ROOT = "#0e0e0e"
+_BG_CARD = "#161616"
+_BG_CTRL = "#1c1c1c"
+_FG_HEAD = "#e0e0e0"
+_FG_SUB  = "#555555"
+_FG_HINT = "#404040"
+_FONT    = "Segoe UI"
+
 # --- ttk style for dark combobox -----------------------------------------
 _STYLE_DONE = False
 
@@ -31,12 +40,20 @@ def _apply_dark_style(root: tk.Tk) -> None:
     style.theme_use("clam")
     style.configure(
         "Dark.TCombobox",
-        fieldbackground="#2a2a2a",
-        background="#2a2a2a",
+        fieldbackground=_BG_CTRL,
+        background=_BG_CTRL,
         foreground="#cccccc",
-        selectbackground="#185FA5",
+        selectbackground=_ACCENT,
         selectforeground="#ffffff",
-        arrowcolor="#aaaaaa",
+        arrowcolor="#555555",
+        bordercolor="#222222",
+        lightcolor="#222222",
+        darkcolor="#222222",
+    )
+    style.map(
+        "Dark.TCombobox",
+        fieldbackground=[("readonly", _BG_CTRL)],
+        foreground=[("readonly", "#cccccc")],
     )
     _STYLE_DONE = True
 
@@ -92,12 +109,12 @@ class DeviceSelector:
         """
         self._root = tk.Tk()
         self._root.title("Live Subtitles — Audio Setup")
-        self._root.configure(bg="#1a1a1a")
+        self._root.configure(bg=_BG_ROOT)
         self._root.resizable(False, False)
 
         sw = self._root.winfo_screenwidth()
         sh = self._root.winfo_screenheight()
-        w, h = 540, 460
+        w, h = 560, 490
         self._root.geometry(f"{w}x{h}+{(sw - w) // 2}+{(sh - h) // 2}")
 
         _apply_dark_style(self._root)
@@ -134,34 +151,42 @@ class DeviceSelector:
     def _build(self) -> None:
         root = self._root
 
+        # ── Accent strip ──
+        tk.Frame(root, bg=_ACCENT, height=3).pack(fill="x", side="top")
+
         # ── Title ──
+        header = tk.Frame(root, bg=_BG_ROOT)
+        header.pack(fill="x", padx=24, pady=(16, 4))
         tk.Label(
-            root,
+            header,
             text="Audio Device Setup",
-            fg="#ffffff",
-            bg="#1a1a1a",
-            font=("Arial", 13, "bold"),
-        ).pack(pady=(18, 2))
+            fg=_FG_HEAD,
+            bg=_BG_ROOT,
+            font=(_FONT, 13, "bold"),
+            anchor="w",
+        ).pack(side="left")
         tk.Label(
             root,
-            text="Select devices and language before starting transcription.",
-            fg="#666666",
-            bg="#1a1a1a",
-            font=("Arial", 9),
-        ).pack(pady=(0, 10))
+            text="Configure inputs before starting transcription.",
+            fg=_FG_SUB,
+            bg=_BG_ROOT,
+            font=(_FONT, 8),
+            anchor="w",
+        ).pack(fill="x", padx=24, pady=(0, 12))
+
+        def _card(label_text: str) -> tk.Frame:
+            outer = tk.Frame(root, bg=_BG_ROOT)
+            outer.pack(fill="x", padx=20, pady=(0, 6))
+            card = tk.Frame(outer, bg=_BG_CARD, padx=14, pady=10)
+            card.pack(fill="x")
+            tk.Label(
+                card, text=label_text, fg=_FG_HINT, bg=_BG_CARD,
+                font=(_FONT, 7, "bold"), anchor="w",
+            ).pack(fill="x", pady=(0, 4))
+            return card
 
         # ── Mic section ──
-        mic_frame = tk.Frame(root, bg="#222222", padx=14, pady=10)
-        mic_frame.pack(fill="x", padx=20, pady=(0, 8))
-
-        tk.Label(
-            mic_frame,
-            text="Microphone  (your voice → right panel translation)",
-            fg="#aaaaaa",
-            bg="#222222",
-            font=("Arial", 9, "bold"),
-            anchor="w",
-        ).pack(fill="x")
+        mic_frame = _card("MICROPHONE  —  your voice → right panel")
 
         mic_names = [f"[{i}]  {name}" for i, name in self._input_devices]
         self._mic_var = tk.StringVar()
@@ -170,43 +195,32 @@ class DeviceSelector:
             textvariable=self._mic_var,
             values=mic_names,
             state="readonly",
-            width=56,
+            width=58,
             style="Dark.TCombobox",
         )
-        mic_combo.pack(fill="x", pady=(4, 6))
+        mic_combo.pack(fill="x", pady=(0, 6))
         mic_combo.bind("<<ComboboxSelected>>", self._on_mic_changed)
 
-        # Pre-select current mic
         self._mic_idx = self._select_combo(
             mic_combo, self._mic_idx, self._input_devices, default_first=True
         )
 
         # VU meter
-        vu_row = tk.Frame(mic_frame, bg="#222222")
+        vu_row = tk.Frame(mic_frame, bg=_BG_CARD)
         vu_row.pack(fill="x")
         tk.Label(
-            vu_row, text="Level:", fg="#555555", bg="#222222", font=("Arial", 8), width=6
+            vu_row, text="Level", fg=_FG_HINT, bg=_BG_CARD,
+            font=(_FONT, 7), width=5,
         ).pack(side="left")
         self._mic_vu = tk.Canvas(
-            vu_row, width=380, height=10, bg="#111111", highlightthickness=0
+            vu_row, width=390, height=6, bg="#0c0c0c", highlightthickness=0
         )
-        self._mic_vu.pack(side="left")
-        self._mic_bar = self._mic_vu.create_rectangle(0, 0, 0, 10, fill="#00cc44", width=0)
+        self._mic_vu.pack(side="left", pady=2)
+        self._mic_bar = self._mic_vu.create_rectangle(0, 0, 0, 6, fill="#00cc44", width=0)
 
-        # ── Input language section ──
-        lang_frame = tk.Frame(root, bg="#222222", padx=14, pady=10)
-        lang_frame.pack(fill="x", padx=20, pady=(0, 8))
+        # ── Speak language section ──
+        lang_frame = _card("SPEAK LANGUAGE  —  language you speak into the mic")
 
-        tk.Label(
-            lang_frame,
-            text="Speak language  (language you will speak into the mic)",
-            fg="#aaaaaa",
-            bg="#222222",
-            font=("Arial", 9, "bold"),
-            anchor="w",
-        ).pack(fill="x")
-
-        # Build option strings: "English  [en]"
         lang_opts = [f"{name}  [{code}]" for code, name in self._input_languages.items()]
         self._lang_var = tk.StringVar()
         lang_combo = ttk.Combobox(
@@ -214,27 +228,15 @@ class DeviceSelector:
             textvariable=self._lang_var,
             values=lang_opts,
             state="readonly",
-            width=56,
+            width=58,
             style="Dark.TCombobox",
         )
-        lang_combo.pack(fill="x", pady=(4, 2))
+        lang_combo.pack(fill="x")
         lang_combo.bind("<<ComboboxSelected>>", self._on_lang_changed)
-
-        # Pre-select English (or first available)
         self._preselect_input_lang(lang_combo)
 
-        # ── Loopback section ──
-        lb_frame = tk.Frame(root, bg="#222222", padx=14, pady=10)
-        lb_frame.pack(fill="x", padx=20, pady=(0, 8))
-
-        tk.Label(
-            lb_frame,
-            text="System audio loopback  (incoming voice → left panel translation)",
-            fg="#aaaaaa",
-            bg="#222222",
-            font=("Arial", 9, "bold"),
-            anchor="w",
-        ).pack(fill="x")
+        # ── Loopback device section ──
+        lb_frame = _card("SYSTEM AUDIO LOOPBACK  —  incoming voice → left panel")
 
         lb_opts = ["(disabled — single-mic mode)"] + [
             f"[{i}]  {name}" for i, name in self._loopback_devices
@@ -245,16 +247,16 @@ class DeviceSelector:
             textvariable=self._lb_var,
             values=lb_opts,
             state="readonly",
-            width=56,
+            width=58,
             style="Dark.TCombobox",
         )
-        lb_combo.pack(fill="x", pady=(4, 2))
+        lb_combo.pack(fill="x")
         lb_combo.bind("<<ComboboxSelected>>", self._on_lb_changed)
 
         if self._loopback_idx is not None and self._loopback_devices:
             self._loopback_idx = self._select_combo(
                 lb_combo, self._loopback_idx, self._loopback_devices,
-                default_first=True, offset=1  # offset for "(disabled)" entry
+                default_first=True, offset=1
             )
         elif self._loopback_devices:
             lb_combo.current(1)
@@ -264,24 +266,15 @@ class DeviceSelector:
             self._loopback_idx = None
             tk.Label(
                 lb_frame,
-                text="No Stereo Mix found. Enable it in Windows Sound → Recording.",
-                fg="#cc6600",
-                bg="#222222",
-                font=("Arial", 8),
-            ).pack(anchor="w", pady=(2, 0))
+                text="No loopback device found — enable Stereo Mix in Windows Sound → Recording.",
+                fg="#a05020",
+                bg=_BG_CARD,
+                font=(_FONT, 7),
+                anchor="w",
+            ).pack(fill="x", pady=(4, 0))
 
         # ── Loopback language section ──
-        lb_lang_frame = tk.Frame(root, bg="#222222", padx=14, pady=10)
-        lb_lang_frame.pack(fill="x", padx=20, pady=(0, 14))
-
-        tk.Label(
-            lb_lang_frame,
-            text="Incoming voice language  (language spoken through the loopback)",
-            fg="#aaaaaa",
-            bg="#222222",
-            font=("Arial", 9, "bold"),
-            anchor="w",
-        ).pack(fill="x")
+        lb_lang_frame = _card("INCOMING VOICE LANGUAGE  —  language heard through loopback")
 
         lb_lang_opts = [f"{name}  [{code}]" for code, name in self._input_languages.items()]
         self._lb_lang_var = tk.StringVar()
@@ -290,42 +283,41 @@ class DeviceSelector:
             textvariable=self._lb_lang_var,
             values=lb_lang_opts,
             state="readonly",
-            width=56,
+            width=58,
             style="Dark.TCombobox",
         )
-        lb_lang_combo.pack(fill="x", pady=(4, 2))
+        lb_lang_combo.pack(fill="x")
         lb_lang_combo.bind("<<ComboboxSelected>>", self._on_lb_lang_changed)
-
-        # Pre-select English by default
         self._preselect_loopback_lang(lb_lang_combo)
 
         # ── Buttons ──
-        btn_frame = tk.Frame(root, bg="#1a1a1a")
-        btn_frame.pack(pady=6)
+        btn_frame = tk.Frame(root, bg=_BG_ROOT)
+        btn_frame.pack(pady=(10, 6))
 
-        tk.Button(
+        start_btn = tk.Button(
             btn_frame,
-            text="Start",
-            bg="#185FA5",
+            text="▶  Start",
+            bg=_ACCENT,
             fg="#ffffff",
-            activebackground="#1e74cc",
+            activebackground="#2280e0",
             activeforeground="#ffffff",
-            font=("Arial", 10, "bold"),
-            width=12,
+            font=(_FONT, 10, "bold"),
+            width=14,
             relief="flat",
             cursor="hand2",
             command=self._on_start,
-        ).pack(side="left", padx=10)
+        )
+        start_btn.pack(side="left", padx=10)
 
         tk.Button(
             btn_frame,
             text="Exit",
-            bg="#3a3a3a",
-            fg="#aaaaaa",
-            activebackground="#555555",
-            activeforeground="#ffffff",
-            font=("Arial", 10),
-            width=12,
+            bg="#1e1e1e",
+            fg="#555555",
+            activebackground="#2a2a2a",
+            activeforeground="#aaaaaa",
+            font=(_FONT, 9),
+            width=10,
             relief="flat",
             cursor="hand2",
             command=self._on_exit,

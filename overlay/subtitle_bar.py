@@ -17,6 +17,32 @@ from typing import Callable
 # Display order for language buttons
 _LANG_ORDER = ["fr", "it", "pt", "es", "el", "bg", "sq"]
 
+# Premium palette
+_ACCENT      = "#1a6bc0"
+_ACCENT_HVR  = "#2280e0"
+_BG_SUB      = "#0c0c0c"
+_BG_CTRL     = "#080808"
+_BG_BTN      = "#1c1c1c"
+_BG_BTN_HVR  = "#252525"
+_FG_CURR     = "#f0f0f0"
+_FG_PREV     = "#4a4a4a"
+_FG_LABEL    = "#505050"
+_FG_BTN      = "#888888"
+_FG_BTN_ACT  = "#ffffff"
+_SEP_LINE    = "#1e1e1e"
+_FONT        = "Segoe UI"
+
+
+def _hover(widget: tk.Widget, bg_on: str, bg_off: str,
+           fg_on: str | None = None, fg_off: str | None = None) -> None:
+    """Bind enter/leave hover colour change to a widget."""
+    def on_enter(_e):
+        widget.configure(bg=bg_on, **({"fg": fg_on} if fg_on else {}))
+    def on_leave(_e):
+        widget.configure(bg=bg_off, **({"fg": fg_off} if fg_off else {}))
+    widget.bind("<Enter>", on_enter)
+    widget.bind("<Leave>", on_leave)
+
 
 class SubtitleBar:
     def __init__(self, languages: dict[str, str], cfg: dict | None = None,
@@ -36,14 +62,14 @@ class SubtitleBar:
         self._input_languages: dict[str, str] = input_languages or {"en": "English"}
 
         c = cfg or {}
-        self._font_sz_curr: int = c.get("font_size_current",   16)
-        self._font_sz_prev: int = c.get("font_size_previous",  14)
-        self._bg:           str = c.get("background_color",    "#1a1a1a")
-        self._fg_curr:      str = c.get("text_color_current",  "#ffffff")
-        self._fg_prev:      str = c.get("text_color_previous", "#888888")
-        self._divider:      str = c.get("divider_color",       "#333333")
-        self._sub_h:        int = c.get("height",              120)
-        self._ctrl_h:       int = c.get("control_bar_height",  36)
+        self._font_sz_curr: int = c.get("font_size_current",   15)
+        self._font_sz_prev: int = c.get("font_size_previous",  11)
+        self._bg:           str = c.get("background_color",    _BG_SUB)
+        self._fg_curr:      str = c.get("text_color_current",  _FG_CURR)
+        self._fg_prev:      str = c.get("text_color_previous", _FG_PREV)
+        self._divider:      str = c.get("divider_color",       _SEP_LINE)
+        self._sub_h:        int = c.get("height",              110)
+        self._ctrl_h:       int = c.get("control_bar_height",  38)
 
         # Pre-select default so transcription starts immediately on launch
         self._sel_code: str = default_lang if default_lang in self._languages else (
@@ -77,6 +103,7 @@ class SubtitleBar:
         self._lang_label:    tk.Label | None = None
         self._status_canvas: tk.Canvas | None = None
         self._status_dot = None
+        self._status_ring = None
         self._en_prev: tk.Label | None = None
         self._en_curr: tk.Label | None = None
         self._tr_prev: tk.Label | None = None
@@ -140,7 +167,7 @@ class SubtitleBar:
         self._root = tk.Tk()
         self._build(self._root)
         self._ready.set()
-        self._poll_queue()      # start the 50ms polling loop
+        self._poll_queue()
         self._root.mainloop()
 
     def _poll_queue(self) -> None:
@@ -171,18 +198,18 @@ class SubtitleBar:
     def _build(self, root: tk.Tk) -> None:
         sw = root.winfo_screenwidth()
         sh = root.winfo_screenheight()
-        total_h = self._ctrl_h + self._sub_h
+        total_h = self._ctrl_h + self._sub_h + 2  # +2 for accent strip
 
         root.geometry(f"{sw}x{total_h}+0+{sh - total_h}")
-        root.configure(bg=self._bg)
+        root.configure(bg=_BG_CTRL)
         root.title("Live Subtitles")
         root.overrideredirect(True)
         root.wm_attributes("-topmost", True)
-        root.wm_attributes("-alpha", 0.93)
+        root.wm_attributes("-alpha", 0.95)
 
-        # Subtitle area at top of window, control bar at bottom.
-        # This way the subtitle text is visible above the control bar
-        # even when other application windows are maximised below.
+        # 2px blue accent strip at very top
+        tk.Frame(root, bg=_ACCENT, height=2).pack(fill="x", side="top")
+
         self._build_subtitle_area(root, sw)
         self._build_control_bar(root, sw)
 
@@ -202,7 +229,7 @@ class SubtitleBar:
         sub.pack(fill="x", side="top")
         sub.pack_propagate(False)
 
-        wrap = min(sw // 2 - 32, 560)  # ~80 chars at Arial 13
+        wrap = min(sw // 2 - 40, 620)
 
         # Left panel: English
         left = tk.Frame(sub, bg=self._bg)
@@ -210,20 +237,20 @@ class SubtitleBar:
 
         self._en_prev = tk.Label(
             left, text="", fg=self._fg_prev, bg=self._bg,
-            font=("Arial", self._font_sz_prev),
-            anchor="w", padx=16, wraplength=wrap,
+            font=(_FONT, self._font_sz_prev),
+            anchor="w", padx=20, wraplength=wrap,
         )
-        self._en_prev.pack(side="top", fill="x", pady=(14, 1))
+        self._en_prev.pack(side="top", fill="x", pady=(16, 2))
 
         self._en_curr = tk.Label(
             left, text="", fg=self._fg_curr, bg=self._bg,
-            font=("Arial", self._font_sz_curr, "bold"),
-            anchor="w", padx=16, wraplength=wrap,
+            font=(_FONT, self._font_sz_curr, "bold"),
+            anchor="w", padx=20, wraplength=wrap,
         )
         self._en_curr.pack(side="top", fill="x")
 
-        # Divider
-        tk.Frame(sub, bg=self._divider, width=1).pack(side="left", fill="y")
+        # 1px vertical divider
+        tk.Frame(sub, bg=self._divider, width=1).pack(side="left", fill="y", pady=10)
 
         # Right panel: Translated
         right = tk.Frame(sub, bg=self._bg)
@@ -231,36 +258,56 @@ class SubtitleBar:
 
         self._tr_prev = tk.Label(
             right, text="", fg=self._fg_prev, bg=self._bg,
-            font=("Arial", self._font_sz_prev),
-            anchor="w", padx=16, wraplength=wrap,
+            font=(_FONT, self._font_sz_prev),
+            anchor="w", padx=20, wraplength=wrap,
         )
-        self._tr_prev.pack(side="top", fill="x", pady=(14, 1))
+        self._tr_prev.pack(side="top", fill="x", pady=(16, 2))
 
         self._tr_curr = tk.Label(
             right, text="", fg=self._fg_curr, bg=self._bg,
-            font=("Arial", self._font_sz_curr, "bold"),
-            anchor="w", padx=16, wraplength=wrap,
+            font=(_FONT, self._font_sz_curr, "bold"),
+            anchor="w", padx=20, wraplength=wrap,
         )
         self._tr_curr.pack(side="top", fill="x")
 
     def _build_control_bar(self, root: tk.Tk, sw: int) -> None:
-        ctrl = tk.Frame(root, bg="#111111", height=self._ctrl_h)
+        # Thin separator between subtitle and control areas
+        tk.Frame(root, bg="#161616", height=1).pack(fill="x", side="top")
+
+        ctrl = tk.Frame(root, bg=_BG_CTRL, height=self._ctrl_h)
         ctrl.pack(fill="x", side="bottom")
         ctrl.pack_propagate(False)
 
-        # Status dot
-        self._status_canvas = tk.Canvas(ctrl, width=14, height=14,
-                                        bg="#111111", highlightthickness=0)
-        self._status_canvas.pack(side="left", padx=(10, 6), pady=11)
+        # ── Status pill ───────────────────────────────────────────────
+        pill = tk.Frame(ctrl, bg="#141414", padx=8, pady=3)
+        pill.pack(side="left", padx=(12, 10), pady=9)
+
+        self._status_canvas = tk.Canvas(
+            pill, width=8, height=8, bg="#141414", highlightthickness=0
+        )
+        self._status_canvas.pack(side="left", padx=(0, 5))
         self._status_dot = self._status_canvas.create_oval(
-            1, 1, 13, 13, fill="#cc0000", outline="")
+            0, 0, 8, 8, fill="#cc0000", outline=""
+        )
 
-        tk.Label(ctrl, text="LIVE SUBTITLES", fg="#444444", bg="#111111",
-                 font=("Arial", 8)).pack(side="left", padx=(0, 12))
+        tk.Label(
+            pill, text="LIVE", fg="#333333", bg="#141414",
+            font=(_FONT, 7, "bold"), letterSpacing=2,
+        ).pack(side="left")
 
-        # ── Mic language selector ──────────────────────────────────────
-        tk.Label(ctrl, text="Speak:", fg="#555555", bg="#111111",
-                 font=("Arial", 8)).pack(side="left", padx=(0, 2))
+        # ── Thin vertical rule ────────────────────────────────────────
+        def _vsep(parent=ctrl, padx=(0, 10)):
+            tk.Frame(parent, bg="#1e1e1e", width=1).pack(
+                side="left", fill="y", pady=8, padx=padx
+            )
+
+        _vsep(padx=(0, 8))
+
+        # ── Mic language selector ─────────────────────────────────────
+        tk.Label(
+            ctrl, text="Speak", fg=_FG_LABEL, bg=_BG_CTRL,
+            font=(_FONT, 7),
+        ).pack(side="left", padx=(0, 3))
 
         input_codes = list(self._input_languages.keys())
         self._mic_lang_var = tk.StringVar(
@@ -274,21 +321,24 @@ class SubtitleBar:
             command=self._on_mic_lang_select,
         )
         mic_menu.config(
-            bg="#2a2a2a", fg="#aaaaaa",
-            activebackground="#185FA5", activeforeground="#ffffff",
+            bg=_BG_BTN, fg=_FG_BTN_ACT,
+            activebackground=_ACCENT, activeforeground="#ffffff",
             relief="flat", bd=0, highlightthickness=0,
-            font=("Arial", 9, "bold"), width=2, cursor="hand2",
+            font=(_FONT, 8, "bold"), width=2, cursor="hand2",
             indicatoron=False,
         )
         mic_menu["menu"].config(
-            bg="#2a2a2a", fg="#cccccc",
-            activebackground="#185FA5", activeforeground="#ffffff",
+            bg="#1c1c1c", fg="#cccccc",
+            activebackground=_ACCENT, activeforeground="#ffffff",
+            font=(_FONT, 8),
         )
-        mic_menu.pack(side="left", padx=(0, 14))
+        mic_menu.pack(side="left", padx=(0, 12))
 
-        # ── Loopback language selector ─────────────────────────────────
-        tk.Label(ctrl, text="Loopback:", fg="#555555", bg="#111111",
-                 font=("Arial", 8)).pack(side="left", padx=(0, 2))
+        # ── Loopback language selector ────────────────────────────────
+        tk.Label(
+            ctrl, text="Loopback", fg=_FG_LABEL, bg=_BG_CTRL,
+            font=(_FONT, 7),
+        ).pack(side="left", padx=(0, 3))
 
         self._loopback_lang_var = tk.StringVar(
             value=self._loopback_lang_code.upper()
@@ -301,62 +351,66 @@ class SubtitleBar:
             command=self._on_loopback_lang_select,
         )
         lb_menu.config(
-            bg="#2a2a2a", fg="#aaaaaa",
-            activebackground="#185FA5", activeforeground="#ffffff",
+            bg=_BG_BTN, fg=_FG_BTN_ACT,
+            activebackground=_ACCENT, activeforeground="#ffffff",
             relief="flat", bd=0, highlightthickness=0,
-            font=("Arial", 9, "bold"), width=2, cursor="hand2",
+            font=(_FONT, 8, "bold"), width=2, cursor="hand2",
             indicatoron=False,
         )
         lb_menu["menu"].config(
-            bg="#2a2a2a", fg="#cccccc",
-            activebackground="#185FA5", activeforeground="#ffffff",
+            bg="#1c1c1c", fg="#cccccc",
+            activebackground=_ACCENT, activeforeground="#ffffff",
+            font=(_FONT, 8),
         )
-        lb_menu.pack(side="left", padx=(0, 14))
+        lb_menu.pack(side="left", padx=(0, 12))
 
-        # ── Translation output language buttons ────────────────────────
-        tk.Frame(ctrl, bg="#333333", width=1).pack(side="left", fill="y", pady=6, padx=(0, 8))
+        _vsep(padx=(0, 10))
 
+        # ── Translation output language buttons ───────────────────────
         for code, name in self._languages.items():
+            is_active = (code == self._sel_code)
             btn = tk.Button(
                 ctrl,
                 text=code.upper(),
                 width=3,
-                bg="#2a2a2a", fg="#aaaaaa",
-                activebackground="#185FA5", activeforeground="#ffffff",
+                bg=_ACCENT if is_active else _BG_BTN,
+                fg=_FG_BTN_ACT if is_active else _FG_BTN,
+                activebackground=_ACCENT_HVR,
+                activeforeground="#ffffff",
                 relief="flat", bd=0,
-                font=("Arial", 9, "bold"),
+                font=(_FONT, 8, "bold"),
                 cursor="hand2",
                 command=lambda c=code, n=name: self._do_select_lang(c, n),
             )
-            btn.pack(side="left", padx=2, pady=5)
+            btn.pack(side="left", padx=2, pady=6)
+            if not is_active:
+                _hover(btn, _BG_BTN_HVR, _BG_BTN, _FG_BTN_ACT, _FG_BTN)
             self._lang_buttons[code] = btn
 
-        # Active language label
-        init_label = self._sel_name if self._sel_name else "← select language"
-        init_fg    = "#cccccc"      if self._sel_name else "#555555"
-        self._lang_label = tk.Label(ctrl, text=init_label,
-                                    fg=init_fg, bg="#111111",
-                                    font=("Arial", 9))
-        self._lang_label.pack(side="left", padx=(12, 0))
+        # Active language name label
+        init_label = self._sel_name if self._sel_name else "← select"
+        init_fg    = "#aaaaaa"     if self._sel_name else "#3a3a3a"
+        self._lang_label = tk.Label(
+            ctrl, text=init_label, fg=init_fg, bg=_BG_CTRL,
+            font=(_FONT, 8),
+        )
+        self._lang_label.pack(side="left", padx=(10, 0))
 
-        # Highlight pre-selected button
-        if self._sel_code in self._lang_buttons:
-            self._lang_buttons[self._sel_code].configure(bg="#185FA5", fg="#ffffff")
-
-        # Exit button (right side)
-        tk.Button(
+        # ── Exit button (right-anchored) ──────────────────────────────
+        exit_btn = tk.Button(
             ctrl,
-            text="✕ Exit",
-            bg="#111111",
-            fg="#888888",
-            activebackground="#cc0000",
+            text="✕  Exit",
+            bg=_BG_CTRL,
+            fg="#3a3a3a",
+            activebackground="#8b0000",
             activeforeground="#ffffff",
-            relief="flat",
-            bd=0,
-            font=("Arial", 9, "bold"),
+            relief="flat", bd=0,
+            font=(_FONT, 8),
             cursor="hand2",
             command=self._on_exit_clicked,
-        ).pack(side="right", padx=(0, 10), pady=8)
+        )
+        exit_btn.pack(side="right", padx=(0, 14), pady=8)
+        _hover(exit_btn, "#8b0000", _BG_CTRL, "#ffffff", "#3a3a3a")
 
     # ── OptionMenu handlers (run directly on tkinter thread) ─────────
 
@@ -397,12 +451,18 @@ class SubtitleBar:
         self._sel_code = code
         self._sel_name = name
         for c, btn in self._lang_buttons.items():
+            active = (c == code)
             btn.configure(
-                bg="#185FA5" if c == code else "#2a2a2a",
-                fg="#ffffff"  if c == code else "#aaaaaa",
+                bg=_ACCENT   if active else _BG_BTN,
+                fg="#ffffff"  if active else _FG_BTN,
             )
+            if active:
+                btn.unbind("<Enter>")
+                btn.unbind("<Leave>")
+            else:
+                _hover(btn, _BG_BTN_HVR, _BG_BTN, _FG_BTN_ACT, _FG_BTN)
         if self._lang_label:
-            self._lang_label.configure(text=name, fg="#cccccc")
+            self._lang_label.configure(text=name, fg="#aaaaaa")
         if not self._lang_selected.is_set():
             self._lang_selected.set()
         elif self._on_lang_change:
@@ -410,5 +470,5 @@ class SubtitleBar:
 
     def _do_set_status(self, connected: bool) -> None:
         if self._status_canvas and self._status_dot is not None:
-            self._status_canvas.itemconfig(
-                self._status_dot, fill="#00cc44" if connected else "#cc0000")
+            color = "#00e054" if connected else "#cc0000"
+            self._status_canvas.itemconfig(self._status_dot, fill=color)
