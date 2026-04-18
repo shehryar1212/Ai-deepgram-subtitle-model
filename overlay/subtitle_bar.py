@@ -292,7 +292,7 @@ class SubtitleBar:
 
         tk.Label(
             pill, text="LIVE", fg="#333333", bg="#141414",
-            font=(_FONT, 7, "bold"), letterSpacing=2,
+            font=(_FONT, 7, "bold"),
         ).pack(side="left")
 
         # ── Thin vertical rule ────────────────────────────────────────
