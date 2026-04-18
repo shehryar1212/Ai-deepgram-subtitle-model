@@ -305,8 +305,8 @@ class SubtitleBar:
 
         # ── Mic language selector ─────────────────────────────────────
         tk.Label(
-            ctrl, text="Speak", fg=_FG_LABEL, bg=_BG_CTRL,
-            font=(_FONT, 7),
+            ctrl, text="You:", fg=_FG_LABEL, bg=_BG_CTRL,
+            font=(_FONT, 8),
         ).pack(side="left", padx=(0, 3))
 
         input_codes = list(self._input_languages.keys())
@@ -336,8 +336,8 @@ class SubtitleBar:
 
         # ── Loopback language selector ────────────────────────────────
         tk.Label(
-            ctrl, text="Loopback", fg=_FG_LABEL, bg=_BG_CTRL,
-            font=(_FONT, 7),
+            ctrl, text="Audience:", fg=_FG_LABEL, bg=_BG_CTRL,
+            font=(_FONT, 8),
         ).pack(side="left", padx=(0, 3))
 
         self._loopback_lang_var = tk.StringVar(
