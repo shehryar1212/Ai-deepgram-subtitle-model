@@ -93,13 +93,23 @@ class AudiencePipeline:
                         continue
                     try:
                         corrected, _ = correct(text)
+
+                        # Step 1: bring to English (skip if already English)
                         if self._lang_code == "en":
-                            translated = corrected
+                            in_english = corrected
                         else:
-                            translated = translate(corrected, "English")
-                        print(f"[AUDIENCE] {corrected}  →  {translated}", flush=True)
-                        self._overlay.set_english(f"[{self._lang_name}] {corrected}")
-                        self._overlay.set_english(f"→ {translated}")
+                            in_english = translate(corrected, "English")
+
+                        # Step 2: translate to whatever output language is active
+                        _, target_name = self._overlay.get_selected_language()
+                        if target_name and target_name.lower() != "english":
+                            out_text = translate(in_english, target_name)
+                        else:
+                            out_text = in_english
+
+                        print(f"[AUDIENCE] {in_english}  →  {out_text}", flush=True)
+                        self._overlay.set_english(f"[Audience] {in_english}")
+                        self._overlay.set_translated(out_text)
                     except Exception as e:
                         print(f"[WARN] Audience translation failed: {e}", flush=True)
 
