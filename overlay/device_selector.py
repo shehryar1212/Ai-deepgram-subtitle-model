@@ -7,11 +7,14 @@ Features:
   - Dropdown of detected loopback/Stereo Mix devices for audience capture
   - Input language selection (language you will speak in → sent to Deepgram)
   - Live VU meter for the selected mic (confirms audio is flowing)
-  - Dark theme matching the subtitle overlay
+  - Persists last-used selections to config/last_session.json
+  - Dark premium theme matching the subtitle overlay
 """
 
+import json
 import threading
 import tkinter as tk
+from pathlib import Path
 from tkinter import ttk
 
 import numpy as np
@@ -27,6 +30,8 @@ _FG_HEAD = "#e0e0e0"
 _FG_SUB  = "#555555"
 _FG_HINT = "#404040"
 _FONT    = "Segoe UI"
+
+_SESSION_FILE = Path(__file__).parent.parent / "config" / "last_session.json"
 
 # --- ttk style for dark combobox -----------------------------------------
 _STYLE_DONE = False
@@ -74,15 +79,20 @@ class DeviceSelector:
         current_loopback: int | None = None,
         input_languages: dict[str, str] | None = None,
     ):
-        self._mic_idx = current_mic
-        self._loopback_idx = current_loopback
         self._cancelled = False
         self._root: tk.Tk | None = None
 
         # Input language options: code → name  (English is always available)
         self._input_languages: dict[str, str] = input_languages or {"en": "English"}
-        self._input_lang: str = "en"  # default: English
-        self._loopback_lang: str = "en"  # default: English
+        self._input_lang: str = "en"
+        self._loopback_lang: str = "en"
+
+        # Load last session — overrides defaults when available
+        self._last = _load_last_session()
+
+        # Device indices resolved after _scan_devices()
+        self._mic_idx:      int | None = current_mic
+        self._loopback_idx: int | None = current_loopback
 
         # Level monitor state
         self._level_stream: sd.InputStream | None = None
@@ -90,16 +100,16 @@ class DeviceSelector:
         self._level_lock = threading.Lock()
 
         # Device lists built in show()
-        self._input_devices: list[tuple[int, str]] = []
+        self._input_devices:   list[tuple[int, str]] = []
         self._loopback_devices: list[tuple[int, str]] = []
 
         # Widget refs
         self._mic_vu: tk.Canvas | None = None
         self._mic_bar = None
-        self._mic_var: tk.StringVar | None = None
-        self._lb_var: tk.StringVar | None = None
-        self._lang_var: tk.StringVar | None = None
-        self._lb_lang_var: tk.StringVar | None = None
+        self._mic_var:      tk.StringVar | None = None
+        self._lb_var:       tk.StringVar | None = None
+        self._lang_var:     tk.StringVar | None = None
+        self._lb_lang_var:  tk.StringVar | None = None
 
     # ── Public ──────────────────────────────────────────────────────────
 
@@ -165,10 +175,12 @@ class DeviceSelector:
             font=(_FONT, 13, "bold"),
             anchor="w",
         ).pack(side="left")
+
+        subtitle_text = "Last session restored." if self._last else "Configure inputs before starting transcription."
         tk.Label(
             root,
-            text="Configure inputs before starting transcription.",
-            fg=_FG_SUB,
+            text=subtitle_text,
+            fg="#3a7a3a" if self._last else _FG_SUB,
             bg=_BG_ROOT,
             font=(_FONT, 8),
             anchor="w",
@@ -201,8 +213,10 @@ class DeviceSelector:
         mic_combo.pack(fill="x", pady=(0, 6))
         mic_combo.bind("<<ComboboxSelected>>", self._on_mic_changed)
 
-        self._mic_idx = self._select_combo(
-            mic_combo, self._mic_idx, self._input_devices, default_first=True
+        # Restore by name, fall back to first device
+        saved_mic_name = self._last.get("mic_name") if self._last else None
+        self._mic_idx = self._select_combo_by_name(
+            mic_combo, saved_mic_name, self._input_devices, default_first=True
         )
 
         # VU meter
@@ -233,7 +247,9 @@ class DeviceSelector:
         )
         lang_combo.pack(fill="x")
         lang_combo.bind("<<ComboboxSelected>>", self._on_lang_changed)
-        self._preselect_input_lang(lang_combo)
+
+        saved_input_lang = self._last.get("input_lang") if self._last else None
+        self._preselect_lang(lang_combo, saved_input_lang or "en", "_input_lang")
 
         # ── Loopback device section ──
         lb_frame = _card("SYSTEM AUDIO LOOPBACK  —  incoming voice → left panel")
@@ -253,15 +269,10 @@ class DeviceSelector:
         lb_combo.pack(fill="x")
         lb_combo.bind("<<ComboboxSelected>>", self._on_lb_changed)
 
-        if self._loopback_idx is not None and self._loopback_devices:
-            self._loopback_idx = self._select_combo(
-                lb_combo, self._loopback_idx, self._loopback_devices,
-                default_first=True, offset=1
-            )
-        elif self._loopback_devices:
-            lb_combo.current(1)
-            self._loopback_idx = self._loopback_devices[0][0]
-        else:
+        saved_lb_name    = self._last.get("loopback_name")    if self._last else None
+        saved_lb_enabled = self._last.get("loopback_enabled", True) if self._last else True
+
+        if not self._loopback_devices:
             lb_combo.current(0)
             self._loopback_idx = None
             tk.Label(
@@ -272,6 +283,18 @@ class DeviceSelector:
                 font=(_FONT, 7),
                 anchor="w",
             ).pack(fill="x", pady=(4, 0))
+        elif saved_lb_name is None and not self._last:
+            # First launch: auto-select first loopback device
+            lb_combo.current(1)
+            self._loopback_idx = self._loopback_devices[0][0]
+        elif not saved_lb_enabled:
+            lb_combo.current(0)
+            self._loopback_idx = None
+        else:
+            self._loopback_idx = self._select_combo_by_name(
+                lb_combo, saved_lb_name, self._loopback_devices,
+                default_first=True, offset=1
+            )
 
         # ── Loopback language section ──
         lb_lang_frame = _card("INCOMING VOICE LANGUAGE  —  language heard through loopback")
@@ -288,13 +311,15 @@ class DeviceSelector:
         )
         lb_lang_combo.pack(fill="x")
         lb_lang_combo.bind("<<ComboboxSelected>>", self._on_lb_lang_changed)
-        self._preselect_loopback_lang(lb_lang_combo)
+
+        saved_lb_lang = self._last.get("loopback_lang") if self._last else None
+        self._preselect_lang(lb_lang_combo, saved_lb_lang or "en", "_loopback_lang")
 
         # ── Buttons ──
         btn_frame = tk.Frame(root, bg=_BG_ROOT)
         btn_frame.pack(pady=(10, 6))
 
-        start_btn = tk.Button(
+        tk.Button(
             btn_frame,
             text="▶  Start",
             bg=_ACCENT,
@@ -306,8 +331,7 @@ class DeviceSelector:
             relief="flat",
             cursor="hand2",
             command=self._on_start,
-        )
-        start_btn.pack(side="left", padx=10)
+        ).pack(side="left", padx=10)
 
         tk.Button(
             btn_frame,
@@ -323,44 +347,40 @@ class DeviceSelector:
             command=self._on_exit,
         ).pack(side="left", padx=10)
 
+    # ── Combo helpers ────────────────────────────────────────────────────
+
     @staticmethod
-    def _select_combo(
+    def _select_combo_by_name(
         combo: ttk.Combobox,
-        target_idx: int | None,
+        target_name: str | None,
         device_list: list[tuple[int, str]],
         default_first: bool = True,
         offset: int = 0,
     ) -> int | None:
-        """Select the combo row matching target_idx. Returns the device index."""
-        if target_idx is not None:
-            for j, (i, _) in enumerate(device_list):
-                if i == target_idx:
+        """Select combo row matching target_name (substring, case-insensitive).
+        Falls back to first entry if not found. Returns device index."""
+        if target_name:
+            for j, (idx, name) in enumerate(device_list):
+                if target_name.lower() in name.lower() or name.lower() in target_name.lower():
                     combo.current(j + offset)
-                    return target_idx
+                    return idx
         if default_first and device_list:
             combo.current(0 + offset)
             return device_list[0][0]
         return None
 
-    def _preselect_input_lang(self, combo: ttk.Combobox) -> None:
-        """Pre-select English if available, otherwise first entry."""
+    def _preselect_lang(self, combo: ttk.Combobox, code: str, attr: str) -> None:
+        """Select the combo entry matching code. Falls back to English then first."""
         codes = list(self._input_languages.keys())
-        if "en" in codes:
+        if code in codes:
+            combo.current(codes.index(code))
+            setattr(self, attr, code)
+        elif "en" in codes:
             combo.current(codes.index("en"))
-            self._input_lang = "en"
+            setattr(self, attr, "en")
         elif codes:
             combo.current(0)
-            self._input_lang = codes[0]
-
-    def _preselect_loopback_lang(self, combo: ttk.Combobox) -> None:
-        """Pre-select English as the default loopback language."""
-        codes = list(self._input_languages.keys())
-        if "en" in codes:
-            combo.current(codes.index("en"))
-            self._loopback_lang = "en"
-        elif codes:
-            combo.current(0)
-            self._loopback_lang = codes[0]
+            setattr(self, attr, codes[0])
 
     # ── Event handlers ───────────────────────────────────────────────────
 
@@ -392,7 +412,6 @@ class DeviceSelector:
 
     def _on_lang_changed(self, _event=None) -> None:
         sel = self._lang_var.get()
-        # Format: "English  [en]" — extract code from brackets
         try:
             self._input_lang = sel.split("[")[1].rstrip("]").strip()
         except (IndexError, AttributeError):
@@ -400,6 +419,14 @@ class DeviceSelector:
 
     def _on_start(self) -> None:
         self._stop_level_monitor()
+        _save_last_session(
+            mic_idx=self._mic_idx,
+            mic_devices=self._input_devices,
+            loopback_idx=self._loopback_idx,
+            loopback_devices=self._loopback_devices,
+            input_lang=self._input_lang,
+            loopback_lang=self._loopback_lang,
+        )
         if self._root:
             self._root.destroy()
             self._root = None
@@ -454,12 +481,48 @@ class DeviceSelector:
             return
         with self._level_lock:
             rms = self._level_rms
-        # Scale: 0.1 RMS = full bar (speech is typically 0.02–0.15)
         ratio = min(rms / 0.1, 1.0)
-        w = int(380 * ratio)
+        w = int(390 * ratio)
         if self._mic_vu and self._mic_bar is not None:
-            self._mic_vu.coords(self._mic_bar, 0, 0, w, 10)
+            self._mic_vu.coords(self._mic_bar, 0, 0, w, 6)
             color = "#00cc44" if ratio > 0.15 else "#ffaa00" if ratio > 0.02 else "#555555"
             self._mic_vu.itemconfig(self._mic_bar, fill=color)
         if self._root:
             self._root.after(50, self._poll_vu)
+
+
+# ── Session persistence ───────────────────────────────────────────────────
+
+def _load_last_session() -> dict | None:
+    try:
+        if _SESSION_FILE.exists():
+            return json.loads(_SESSION_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        pass
+    return None
+
+
+def _save_last_session(
+    mic_idx: int | None,
+    mic_devices: list[tuple[int, str]],
+    loopback_idx: int | None,
+    loopback_devices: list[tuple[int, str]],
+    input_lang: str,
+    loopback_lang: str,
+) -> None:
+    mic_name = next((name for idx, name in mic_devices if idx == mic_idx), None)
+    lb_name  = next((name for idx, name in loopback_devices if idx == loopback_idx), None)
+    data = {
+        "mic_name":        mic_name,
+        "mic_index":       mic_idx,
+        "loopback_name":   lb_name,
+        "loopback_index":  loopback_idx,
+        "loopback_enabled": loopback_idx is not None,
+        "input_lang":      input_lang,
+        "loopback_lang":   loopback_lang,
+    }
+    try:
+        _SESSION_FILE.parent.mkdir(parents=True, exist_ok=True)
+        _SESSION_FILE.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    except Exception as e:
+        print(f"[WARN] Could not save session: {e}", flush=True)

@@ -18,6 +18,9 @@ build/
 logs/session_*.json
 transcripts/session_*.txt
 
+# Per-client device/language preferences (machine-specific)
+config/last_session.json
+
 # Generated output files
 subtitle.txt
 subtitle_partial.txt
