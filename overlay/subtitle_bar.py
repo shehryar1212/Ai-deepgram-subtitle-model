@@ -20,13 +20,20 @@ _LANG_ORDER = ["fr", "it", "pt", "es", "el", "bg", "sq"]
 
 class SubtitleBar:
     def __init__(self, languages: dict[str, str], cfg: dict | None = None,
-                 default_lang: str = "fr"):
+                 default_lang: str = "fr",
+                 input_languages: dict[str, str] | None = None,
+                 initial_mic_lang: str = "en",
+                 initial_loopback_lang: str = "en"):
         """
-        languages:    {code: name}  e.g. {"fr": "French", "it": "Italian"}
-        cfg:          overlay block from settings.json
-        default_lang: pre-selected language so transcription starts without a click
+        languages:            {code: name}  translation target languages (FR, IT, etc.)
+        cfg:                  overlay block from settings.json
+        default_lang:         pre-selected translation language
+        input_languages:      {code: name}  all available input languages (for mic/loopback selectors)
+        initial_mic_lang:     language code pre-selected for mic
+        initial_loopback_lang: language code pre-selected for loopback
         """
         self._languages = {k: languages[k] for k in _LANG_ORDER if k in languages}
+        self._input_languages: dict[str, str] = input_languages or {"en": "English"}
 
         c = cfg or {}
         self._font_sz_curr: int = c.get("font_size_current",   16)
@@ -43,6 +50,12 @@ class SubtitleBar:
             next(iter(self._languages), ""))
         self._sel_name: str = self._languages.get(self._sel_code, "")
         self._on_lang_change: Callable[[str, str], None] | None = None
+
+        # Runtime mic / loopback language state
+        self._mic_lang_code:      str = initial_mic_lang
+        self._loopback_lang_code: str = initial_loopback_lang
+        self._on_mic_lang_change:      Callable[[str, str], None] | None = None
+        self._on_loopback_lang_change: Callable[[str, str], None] | None = None
 
         self._root:   tk.Tk | None     = None
         self._thread: threading.Thread | None = None
@@ -68,6 +81,8 @@ class SubtitleBar:
         self._en_curr: tk.Label | None = None
         self._tr_prev: tk.Label | None = None
         self._tr_curr: tk.Label | None = None
+        self._mic_lang_var:      tk.StringVar | None = None
+        self._loopback_lang_var: tk.StringVar | None = None
 
     # ── Public API (safe to call from any thread) ─────────────────────
 
@@ -84,6 +99,18 @@ class SubtitleBar:
 
     def set_on_language_change(self, callback: Callable[[str, str], None]) -> None:
         self._on_lang_change = callback
+
+    def set_on_mic_lang_change(self, callback: Callable[[str, str], None]) -> None:
+        self._on_mic_lang_change = callback
+
+    def set_on_loopback_lang_change(self, callback: Callable[[str, str], None]) -> None:
+        self._on_loopback_lang_change = callback
+
+    def get_mic_language(self) -> tuple[str, str]:
+        return self._mic_lang_code, self._input_languages.get(self._mic_lang_code, self._mic_lang_code)
+
+    def get_loopback_language(self) -> tuple[str, str]:
+        return self._loopback_lang_code, self._input_languages.get(self._loopback_lang_code, self._loopback_lang_code)
 
     def set_english(self, text: str) -> None:
         self._ui_queue.put(("english", text))
@@ -229,9 +256,66 @@ class SubtitleBar:
             1, 1, 13, 13, fill="#cc0000", outline="")
 
         tk.Label(ctrl, text="LIVE SUBTITLES", fg="#444444", bg="#111111",
-                 font=("Arial", 8)).pack(side="left", padx=(0, 16))
+                 font=("Arial", 8)).pack(side="left", padx=(0, 12))
 
-        # Language buttons
+        # ── Mic language selector ──────────────────────────────────────
+        tk.Label(ctrl, text="Speak:", fg="#555555", bg="#111111",
+                 font=("Arial", 8)).pack(side="left", padx=(0, 2))
+
+        input_codes = list(self._input_languages.keys())
+        self._mic_lang_var = tk.StringVar(
+            value=self._mic_lang_code.upper()
+            if self._mic_lang_code in self._input_languages
+            else (input_codes[0].upper() if input_codes else "EN")
+        )
+        mic_menu = tk.OptionMenu(
+            ctrl, self._mic_lang_var,
+            *[c.upper() for c in input_codes],
+            command=self._on_mic_lang_select,
+        )
+        mic_menu.config(
+            bg="#2a2a2a", fg="#aaaaaa",
+            activebackground="#185FA5", activeforeground="#ffffff",
+            relief="flat", bd=0, highlightthickness=0,
+            font=("Arial", 9, "bold"), width=2, cursor="hand2",
+            indicatoron=False,
+        )
+        mic_menu["menu"].config(
+            bg="#2a2a2a", fg="#cccccc",
+            activebackground="#185FA5", activeforeground="#ffffff",
+        )
+        mic_menu.pack(side="left", padx=(0, 14))
+
+        # ── Loopback language selector ─────────────────────────────────
+        tk.Label(ctrl, text="Loopback:", fg="#555555", bg="#111111",
+                 font=("Arial", 8)).pack(side="left", padx=(0, 2))
+
+        self._loopback_lang_var = tk.StringVar(
+            value=self._loopback_lang_code.upper()
+            if self._loopback_lang_code in self._input_languages
+            else (input_codes[0].upper() if input_codes else "EN")
+        )
+        lb_menu = tk.OptionMenu(
+            ctrl, self._loopback_lang_var,
+            *[c.upper() for c in input_codes],
+            command=self._on_loopback_lang_select,
+        )
+        lb_menu.config(
+            bg="#2a2a2a", fg="#aaaaaa",
+            activebackground="#185FA5", activeforeground="#ffffff",
+            relief="flat", bd=0, highlightthickness=0,
+            font=("Arial", 9, "bold"), width=2, cursor="hand2",
+            indicatoron=False,
+        )
+        lb_menu["menu"].config(
+            bg="#2a2a2a", fg="#cccccc",
+            activebackground="#185FA5", activeforeground="#ffffff",
+        )
+        lb_menu.pack(side="left", padx=(0, 14))
+
+        # ── Translation output language buttons ────────────────────────
+        tk.Frame(ctrl, bg="#333333", width=1).pack(side="left", fill="y", pady=6, padx=(0, 8))
+
         for code, name in self._languages.items():
             btn = tk.Button(
                 ctrl,
@@ -273,6 +357,22 @@ class SubtitleBar:
             cursor="hand2",
             command=self._on_exit_clicked,
         ).pack(side="right", padx=(0, 10), pady=8)
+
+    # ── OptionMenu handlers (run directly on tkinter thread) ─────────
+
+    def _on_mic_lang_select(self, value: str) -> None:
+        code = value.lower()
+        name = self._input_languages.get(code, code)
+        self._mic_lang_code = code
+        if self._on_mic_lang_change:
+            self._on_mic_lang_change(code, name)
+
+    def _on_loopback_lang_select(self, value: str) -> None:
+        code = value.lower()
+        name = self._input_languages.get(code, code)
+        self._loopback_lang_code = code
+        if self._on_loopback_lang_change:
+            self._on_loopback_lang_change(code, name)
 
     # ── Command handlers (run on tkinter main thread via _poll_queue) ──
 

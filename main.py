@@ -145,7 +145,12 @@ def main():
 
     # ── Launch overlay — starts with default language pre-selected ───────
     default_lang = overlay_cfg.get("default_language", next(iter(languages), "fr"))
-    subtitle_bar = SubtitleBar(languages, overlay_cfg, default_lang=default_lang)
+    subtitle_bar = SubtitleBar(
+        languages, overlay_cfg, default_lang=default_lang,
+        input_languages=input_languages,
+        initial_mic_lang=input_lang,
+        initial_loopback_lang=loopback_lang,
+    )
     subtitle_bar.start()
     target_lang, target_name = subtitle_bar.wait_for_language()
     print(f"[INFO] Translating to {target_name} ({target_lang})", flush=True)
@@ -159,6 +164,48 @@ def main():
 
     # ── Audience pipeline (system audio loopback) ──────────────────────────
     audience_cfg = cfg.get("audience", {})
+
+    # Mutable refs so language-change callbacks can swap them safely
+    _active_transcriber: list[DeepgramTranscriber] = [transcriber]
+    _active_audience:    list[AudiencePipeline | None] = [None]
+
+    def _restart_mic_transcriber(code: str, name: str) -> None:
+        """Swap the mic Deepgram connection when the user changes the Speak language."""
+        print(f"[INFO] Mic language → {name} ({code})", flush=True)
+        new_t = DeepgramTranscriber(transcript_queue, language=code)
+        try:
+            new_t.start()
+        except Exception as e:
+            print(f"[WARN] Could not start Deepgram for {name}: {e}", flush=True)
+            return
+        old_t = _active_transcriber[0]
+        _active_transcriber[0] = new_t
+        old_t.finish()
+
+    def _restart_audience_pipeline(code: str, name: str) -> None:
+        """Swap the loopback Deepgram connection when the user changes the Loopback language."""
+        if loopback_device is None:
+            return
+        print(f"[INFO] Loopback language → {name} ({code})", flush=True)
+        new_ap = AudiencePipeline(
+            overlay=subtitle_bar,
+            audience_lang_code=code,
+            audience_lang_name=name,
+            loopback_device=loopback_device,
+        )
+        try:
+            new_ap.start()
+        except Exception as e:
+            print(f"[WARN] Could not restart audience pipeline for {name}: {e}", flush=True)
+            return
+        old_ap = _active_audience[0]
+        _active_audience[0] = new_ap
+        if old_ap:
+            old_ap.stop()
+
+    subtitle_bar.set_on_mic_lang_change(_restart_mic_transcriber)
+    subtitle_bar.set_on_loopback_lang_change(_restart_audience_pipeline)
+
     audience_pipeline: AudiencePipeline | None = None
     if audience_cfg.get("enabled", False) and loopback_device is not None:
         # Use language selected in device selector UI (not hardcoded config)
@@ -172,6 +219,7 @@ def main():
         )
         try:
             audience_pipeline.start()
+            _active_audience[0] = audience_pipeline
             print("[INFO] Dual audio active — mic + system audio", flush=True)
         except Exception as e:
             print(f"[WARN] System audio capture unavailable: {e}", flush=True)
@@ -189,7 +237,7 @@ def main():
                     extra.append(audio_queue.get_nowait())
                 combined = np.concatenate(extra, axis=0)
                 combined = np.clip(combined * mic_gain, -1.0, 1.0)
-                transcriber.send_audio(combined)
+                _active_transcriber[0].send_audio(combined)
             except queue.Empty:
                 pass
 
@@ -214,9 +262,9 @@ def main():
                         print(f"\r[PARTIAL]: {text}   ", end="", flush=True)
                     emit_partial(text)
 
-    transcriber.finish()
-    if audience_pipeline is not None:
-        audience_pipeline.stop()
+    _active_transcriber[0].finish()
+    if _active_audience[0] is not None:
+        _active_audience[0].stop()
     subtitle_bar.set_status(False)
     # Drain any remaining finals, wait for in-flight translations to finish
     while not transcript_queue.empty():
